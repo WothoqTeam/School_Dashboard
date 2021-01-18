@@ -1,0 +1,100 @@
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex  mr-5 ">
+            <label for="lastName" class="col-form-label  text-right">ID</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="id" class="form-control" style="margin-right: 3.8rem;"   />
+                <div *ngIf="editFormData.id.invalid &amp;&amp; (editFormData.id.dirty || editFormData.id.touched)"
+                    class="alert-danger">
+                    <span>Last name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex  mr-5">
+            <label for="firstName" class="col-form-label  text-right" >السنه الدراسيه</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="year" class="form-control " />
+                <div *ngIf="editFormData.year.invalid &amp;&amp; (editFormData.year.dirty || editFormData.year.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+      
+        <div class="form-group row d-flex  mr-5">
+            <label for="email" class="col-form-label  text-right">الجنس</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="type" class="form-control " style="margin-right: 2.8rem;" />
+                <div *ngIf="editFormData.type.invalid &amp;&amp; (editFormData.type.dirty || editFormData.type.touched)"
+                    class="alert-danger">
+                    <span *ngIf="editFormData.type.errors.required">Email is required!</span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex  mr-5 mb-5">
+            <label for="mobileNumber" class="col-form-label  text-right"> الفصل الدراسي</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="class_id" class="form-control" />
+                <div *ngIf="editFormData.class_id.invalid &amp;&amp; (editFormData.class_id.dirty || editFormData.class_id.touched)"
+                    class="alert-danger">
+                    <span>Mobile number is required!</span>
+                </div>
+            </div>
+        </div>
+        <p style="float: right;font-size: 15px;margin-top: -2rem;font-weight: bold;">نوع السنه الدراسيه</p>
+        
+        <div style="border: 1px solid rgb(182, 182, 182);width:80%;height: 40px;
+            font-size: 20px; border-radius: 10px;margin-bottom: 3rem;">
+          <!-- Default inline 1-->
+
+          <div class="form-check form-check-inline mt-3  w-25" [formGroup]="editForm">
+            <input type="radio" class="form-check-input" formControlName="study_type" checked name="study_type"
+              value="semester" style="margin-right: -6rem;margin-top: -1rem;">
+            <label class="form-check-label mr-2" for="materialInline1"  style="margin-top: -1rem;">نصف ترم</label>
+          </div>
+
+          <!-- Material inline 2 -->
+          <div class="form-check form-check-inline " style="width:150px" [formGroup]="editForm">
+            <input type="radio" class="form-check-input" formControlName="study_type" name="study_type"
+              value="scholastic" style="margin-right: -4rem;">
+            <label class="form-check-label mr-2" for="materialInline2">ترم كامل</label>
+          </div>
+        </div>
+ 
+        <p style="float: right;font-size: 18px;margin-top: -2rem;"> المواصلات</p>
+        
+        <div style="border: 1px solid rgb(182, 182, 182);width:80%;height: 40px;font-size: 20px;
+              border-radius: 10px;margin-top: 2rem;">
+
+          <!-- Default inline 1-->
+          <div class="form-check form-check-inline mt-3 w-25" [formGroup]="editForm" >
+            <input type="radio" class="form-check-input" formControlName="trip"
+             checked name="trip" value="Round-trip" style="margin-right: -6rem;margin-top: -1rem;">
+            <label class="form-check-label mr-2" for="materialInline1" style="margin-top: -1rem;">ذهاب وعوده</label>
+          </div>
+
+          <!-- Material inline 2 -->
+          <div class="form-check form-check-inline" [formGroup]="editForm" style="width:150px">
+            <input type="radio" class="form-check-input" formControlName="trip" 
+            name="trip" value="one-way" style="margin-right: -4rem;">
+            <label class="form-check-label mr-2" for="materialInline2"> ذهاب او عوده فقط</label>
+          </div>
+        </div>
+        <div class="form-group row d-flex mt-3 ">
+            <label for="firstName" class="col-form-label  mr-5 text-right">الرسوم الدراسيه</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="cost" class="form-control" />
+                <div *ngIf="editFormData.cost.invalid &amp;&amp; (editFormData.cost.dirty || editFormData.cost.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer" >
+            <button [disabled]="isLoading" class="btn  mr-2" (click)="modal.close('Cancel')" style="background-color:  rgb(70, 184, 219);color: white;width:100px" >رجوع</button>
+            <button  [disabled]="isLoading" class="btn  mr-2" style="background-color:  rgb(70, 184, 219);color: white;width:100px"  >حفظ</button>
+        </div>
+ 
+    </form>
+</div>

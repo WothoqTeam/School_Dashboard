@@ -1,0 +1,402 @@
+/* You can add global styles to this file, and also import other style files */
+/*Login CSS*/
+
+body {
+  direction: rtl;
+}
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+.login,
+.image {
+  min-height: 100vh;
+}
+.login-heading {
+font-weight: 300;
+}
+
+.btn-login {
+font-size: 0.9rem;
+letter-spacing: 0.05rem;
+padding: 0.75rem 1rem;
+
+}
+
+.form-label-group {
+position: relative;
+margin-bottom: 1rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+padding: var(--input-padding-y) var(--input-padding-x);
+height: auto;
+
+}
+
+.form-label-group>label {
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+width: 100%;
+margin-bottom: 0;
+/* Override default `<label>` margin */
+line-height: 1.5;
+color: #495057;
+cursor: text;
+/* Match the input under the label */
+border: 1px solid transparent;
+
+
+transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+color: transparent;
+}
+
+.form-label-group input::placeholder {
+color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+padding-top: calc(var(--input-padding-y) / 3);
+padding-bottom: calc(var(--input-padding-y) / 3);
+font-size: 12px;
+color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+.form-label-group>label {
+display: none;
+}
+.form-label-group input::-ms-input-placeholder {
+color: #777;
+}
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+.form-label-group>label {
+display: none;
+}
+.form-label-group input:-ms-input-placeholder {
+color: #777;
+}
+}
+/*EndLogin CSS*/
+/*Logo CSS*/
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+/*EndLogo CSS*/
+/*Input CSS*/
+input[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+input[type="password"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.inputWithIcon {
+  height: 45px;
+}
+.inputWithIcon input {
+    width: 90%;
+    height: 100%;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid rgb(204, 204, 204);
+    outline: none;
+}
+.inputWithIcon span,
+.inputWithIcon input {
+    display: inline-block;
+  
+}
+.inputWithIcon span {
+  width: 10%;
+  height: 100%;
+  background-color: rgb(204, 204, 204);
+  line-height: 3;
+  text-align: center ;
+}
+.inputWithIcon span>i {
+  font-size: 25px;
+  color: #fff;
+}
+.inputWithIcon input[type="text"]:focus + i {
+  color: dodgerBlue;
+  
+}
+  
+.inputWithIcon input[type="password"]:focus + i {
+  color: dodgerBlue;
+}
+.inputWithIcon.inputIconBg input[type="text"]:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
+ 
+}
+  .inputWithIcon.inputIconBg input[type="password"]:focus + i {
+      color: #fff;
+      background-color: dodgerBlue;
+     
+}
+/*EndInput CSS*/
+
+.custom-class.fade{
+  opacity: 1 !important;
+}
+.fade{
+  opacity: 1 !important;
+}
+
+.appSideInfo {
+  display: inline-block;
+  width: 85%;
+}
+
+.appSideInfo .infoContent {
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin: auto;
+}
+.toggle-container .btn-toggle .btn-default {
+  color: #939393;
+}
+
+.btn-toggle {
+  border: 2px solid #b4bbb7;
+  border-radius: 30px;
+  padding: 5px;
+  background-color: #fff;
+  width: 250px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10rem;
+}
+
+.btn-toggle button {
+  border-radius: 30px;
+}
+
+.btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child),
+.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: rgb(182, 182, 182);
+    border-color:#939393;
+}
+
+.vLine {
+  border-left: 3px solid rgb(235, 235, 235);
+  height: 120px;
+  float: right;
+  margin-right: -1.6rem;
+  margin-top: -1rem;
+}
+
+
+.nav {
+  left:50%;
+  margin-left:-150px;
+  top:50px;
+  position:absolute;
+}
+.nav>li>a:hover, .nav>li>a:focus, .nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+  background:#fff;
+}
+.dropdown {
+  background:#fff;
+  border-radius:4px;
+  width:200px;    
+}
+.dropdown-menu>li>a {
+  color:#428bca;
+}
+.dropdown ul.dropdown-menu {
+  border-radius:4px;
+  box-shadow:none;
+  margin-top:20px;
+  width:200px;
+}
+.dropdown ul.dropdown-menu:before {
+  content: "";
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+  content: "";
+  border-bottom: 12px solid #ccc;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  position: absolute;
+  top: -12px;
+  right: 14px;
+  z-index: 9;
+  display: none;
+}
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #c5dbe6;
+  float: left;
+  width: 80%;
+  outline: none;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  height: 49px;
+  padding: 10px;
+  background: #c5dbe6;
+  color: white;
+  font-size: 17px;
+  border: none;
+  outline:none ;
+  cursor: pointer;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+form.example button:hover {
+  background: #428bca;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*Profile Pic Start*/
+.picture-container{
+position: relative;
+cursor: pointer;
+margin-right: 2rem;
+}
+.picture{
+width: 106px;
+height: 106px;
+background-color: #999999;
+border: 4px solid #CCCCCC;
+color: #FFFFFF;
+border-radius: 50%;
+overflow: hidden;
+transition: all 0.2s;
+-webkit-transition: all 0.2s;
+}
+.picture:hover{
+border-color: #2ca8ff;
+}
+.content.ct-wizard-green .picture:hover{
+border-color: #05ae0e;
+}
+.content.ct-wizard-blue .picture:hover{
+border-color: #3472f7;
+}
+.content.ct-wizard-orange .picture:hover{
+border-color: #ff9500;
+}
+.content.ct-wizard-red .picture:hover{
+border-color: #ff3b30;
+}
+.picture input[type="file"] {
+cursor: pointer;
+display: block;
+height: 100%;
+left: 0;
+opacity: 0 !important;
+position: absolute;
+top: 0;
+width: 100%;
+}
+
+.picture-src{
+width: 100%;
+
+}
+
+/*Profile Pic End*/
+.accept{
+background-color: rgb(245, 245, 153);
+
+}
+.complete{
+background-color: lightseagreen;
+
+}
+.editable{
+background-color: rgb(160, 245, 143);
+
+}
+.meeting{
+background-color: rgb(197, 197, 197);
+}
+.payment{
+background-color: rgb(230, 174, 91);
+
+}
+.modal-backdrop {
+  background-color: rgba(75, 75, 75, 0.5) !important ;
+}
+
+#schedule{
+  width: 100%;
+  height: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border: blanchedalmond solid 5px;
+}

@@ -1,0 +1,176 @@
+<div class="modal-body" >
+    <div class="row" style="background-color: rgb(179, 216, 216);margin-top: -1rem;">
+        <p style="margin-left: auto;margin-right: auto;margin-top: 25px;
+        font-size: 20px;font-family: 'Mada', sans-serif;">بيانات المستخدم</p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">اسم المستخدم</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.name}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">اسم الوالد</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.father_full_name}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">الجنس</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.gender}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">نوع السنة الدراسية</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.study_type}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">الفصل الدراسي</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.class_id}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">العام الدراسي</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.study_year}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">الجنسيه</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.nationality}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">رقم هوية الوالد</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.father_national_id}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">رقم الهاتف</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.mobile}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">بريد الكتروني</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.email}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">اسم الطالب</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.student_name}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">رقم هوية الطالب</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.student_national_id}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">تاريخ الميلاد</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.date_of_birth}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">مكان الميلاد</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.place_of_birth}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">الحالة الصحية</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.health_status}}</p>
+           
+                </div>
+              </div>
+        </div>
+        <div class="col-md-6 mt-3">
+            <div class="card" style="width: 15rem;border: 1px solid darkgrey;height: 70px;">
+                <div class="card-body" style="margin-left: auto;margin-top: -1rem;">
+                  <h6 class="card-title text-right">المواصلات</h6>
+                  <p class="card-text text-right" style="color: rgb(116, 160, 160);">{{Justuser.application[0]?.bus}}</p>
+           
+                </div>
+              </div>
+        </div>
+    </div>
+ 
+</div>
+
+

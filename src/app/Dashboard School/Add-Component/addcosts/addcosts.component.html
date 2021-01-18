@@ -1,0 +1,161 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+  <div class="infoContent">
+    <div id="addCosts" class="w3-container city w3-animate-opacity">
+      <div style="margin-top:1rem ;margin-right: 2rem;">
+        <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+            class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الرسوم
+          الدراسية<i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة رسوم
+          دراسية</span>
+      </div>
+      <hr style="width:95%;margin-top: 2rem;">
+      <form [formGroup]="costForm" (ngSubmit)="submitFormCost()">
+
+        <div class="row" style="font-size: 22px;margin-bottom: 2rem;">
+          <div style="float: right;margin-right: 3rem;">
+            <label>السنه الدراسيه</label>
+            <form class="example form-group" [formGroup]="costForm" style="width: 350px;margin-right: -30px;">
+              <input type="text" formControlName="year" style="height:50px;" class="form-control"
+                placeholder="ادخل السنه الدراسيه" name="year">
+              <button type="submit" style="width: 50px;"><i class="fas fa-calendar-alt"
+                  style="font-size: 25px;"></i></button>
+            </form>
+          </div>
+          <div style="float: right;margin-right: 1rem;">
+            <label>الجنس</label>
+            <form class="form-inline example">
+              <div class="form-group">
+                <button type="submit" style="width: 50px;display: inline-block;">
+                  <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+                </button>
+              </div>
+              <div class="form-group" [formGroup]="costForm">
+
+                <select class="form-control" style="width: 300px;height:50px;" formControlName="type"
+                  (change)="onChange($event)">
+
+                  <option value="" disabled selected> اختر الجنس</option>
+
+                  <option value="بنات" style=""> بنات</option>
+
+                  <option value="بنين" style="">بنين</option>
+
+                  <i class="fas fa-angle-down text-info"></i>
+                </select>
+              </div>
+
+            </form>
+          </div>
+
+          <div style="float: right;margin-right: 1rem;">
+            <label>الفصل</label>
+            <form class="form-inline example">
+              <div class="form-group">
+                <button type="submit" style="width: 50px;display: inline-block;">
+                  <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+                </button>
+              </div>
+              <div class="form-group" [formGroup]="costForm">
+
+                <select class="form-control" style="width: 300px;height:50px;" formControlName="class_id">
+                  <option value="" disabled selected>اختر الفصل</option>
+                  <option *ngFor="let item of filterdArray" [value]="item.id">
+                    {{item.name}}
+                  </option>
+                  <i class="fas fa-angle-down text-info"></i>
+                </select>
+
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="row text-right mb-2 " style="font-size: 22px;color: black;">
+          <div class="col-md-3" style="margin-right: 1.5rem;font-weight: bold;">
+            نوع السنه الدراسيه
+          </div>
+          <div class="col-md-2 " style="margin-right: 4.5rem;">
+             المواصلات
+          </div>
+
+          <div class="col-md-1 text-right">
+
+          </div>
+          <div class="col-md-3 text-right" style="margin-right: 4rem;" *ngIf="!tradio1.checked">
+            طبيعة المواصلات 
+          </div>
+        </div>
+        <div class="row">
+          <div style="border: 1px solid rgb(182, 182, 182);width:30%;height: 60px;
+            font-size: 20px; border-radius: 10px;margin-right: 1rem;">
+            <!-- Default inline 1-->
+
+            <div class="form-check form-check-inline mt-3" [formGroup]="costForm">
+              <input type="radio" class="form-check-input" formControlName="study_type" checked name="study_type"
+                value="ترم">
+              <label class="form-check-label mr-2" for="materialInline1">نصف ترم</label>
+            </div>
+
+            <!-- Material inline 2 -->
+            <div class="form-check form-check-inline " style="margin-right: 7rem;" [formGroup]="costForm">
+              <input type="radio" class="form-check-input" formControlName="study_type" name="study_type"
+                value="عام كامل">
+              <label class="form-check-label mr-2" for="materialInline2">عام كامل</label>
+            </div>
+          </div>
+          <div style="border: 1px solid rgb(182, 182, 182);width:30%;height: 60px;display:inline-block;
+          font-size: 20px;
+                  border-radius: 10px;margin-right: 1rem;">
+                <div class="form-check form-check-inline mt-3" [formGroup]="costForm">
+                  <input type="radio" class="form-check-input"   formControlName="transportation" checked name="transportation"
+                  name="transportation" value="بمواصلات"  >
+                   
+                  <label class="form-check-label mr-2" for="materialInline1">باص </label>
+                </div>
+    
+    
+                <div class="form-check form-check-inline mr-5" [formGroup]="costForm">
+                  <input type="radio" class="form-check-input" #tradio1 formControlName="transportation" 
+                  name="transportation" value="بدون مواصلات"  >
+                  <label class="form-check-label mr-2" for="materialInline2">بدون باص</label>
+                </div>
+              </div>
+          <div style="border: 1px solid rgb(182, 182, 182);width:30%;height: 60px;display:inline-block;
+                  font-size: 20px;border-radius: 10px;margin-right: 1rem;" *ngIf="!tradio1.checked">
+            <div class="form-check form-check-inline mt-3" [formGroup]="costForm" >
+              <input type="radio" class="form-check-input"  formControlName="trip" checked name="trip"
+                value="ذهاب وعودة"  >
+              <label class="form-check-label mr-2" for="materialInline1">ذهاب وعوده</label>
+            </div>
+            <div class="form-check form-check-inline mr-5" [formGroup]="costForm">
+              <input type="radio" class="form-check-input" formControlName="trip" name="trip" 
+              value="ذهاب او عودة فقط">
+              <label class="form-check-label mr-2" for="materialInline2"> ذهاب او عوده فقط</label>
+            </div>
+          </div>
+         
+        </div>
+
+        <div class="row" style="margin-top: 1rem;">
+          <div style=" float: right;width:700px;margin-right: -5rem;">
+            <label style="font-size: 22px;margin-right: 6.8rem;">الرسوم الدراسية</label>
+            <form class="example form-group" [formGroup]="costForm">
+              <input type="text" formControlName="cost" style="height:50px;" class="form-control"
+                placeholder="ادخل الرسوم الدراسيه" name="cost">
+              <button type="submit" style="width: 50px;"><i class="fas fa-money-bill-wave"
+                  style="font-size: 25px;"></i></button>
+            </form>
+          </div>
+          <div style="margin-top: 2.7rem;float: left;margin-right: 3rem;">
+            <button type="submit" class="btn " style="color: white;background-color:  rgb(70, 184, 219);width: 400px;
+            height:50px;font-size: 25px;">حفظ</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addCosts" class="w3-container city w3-animate-opacity">
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+                <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+                        class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الامتحانات <i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة امتحان
+                    <i
+                    class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i> </span>
+                    <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة
+                        اسئله</span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <form [formGroup]="quesForm" (ngSubmit)="submitFormQues()">
+
+                <div class="row" style="font-size: 22px;">
+                    <div style="float: right;margin-right: 5rem;">
+                        <label style="margin-right: -2rem;">تفاصيل السؤال</label>
+                        <form class="example form-group" [formGroup]="quesForm"
+                            style="width: 55rem;margin-right: -10rem;">
+                            <input type="text" formControlName="question" style="height:50px;" class="form-control"
+                                placeholder="تفاصيل الامتحان" name="question">
+                            <button type="submit" style="width: 50px;"><i class="fas fa-clipboard-check"
+                                    style="font-size: 25px;"></i></button>
+                        </form>
+                    </div>
+                    <div style="float: right;margin-right: 2rem;">
+                        <label>نوع الاجابة</label>
+                        <form class="form-inline example">
+                            <div class="form-group">
+                                <button type="submit" style="width: 50px;display: inline-block;">
+                                    <i class="fas fa-pen" style="font-size: 25px;"></i>
+                                </button>
+                            </div>
+                            <div class="form-group" [formGroup]="quesForm">
+
+                                <select class="form-control" placeholder="ادخل الفصل "
+                                    style="width: 250px;height:50px; " formControlName="type">
+
+                                    <option value="" disabled selected>اختر نوع السؤال</option>
+                                    <option *ngFor="let item of quesList" [value]="quesList.id">
+                                        {{item.type}}
+                                    </option>
+                                    <i class="fas fa-angle-down text-info"></i>
+                                </select>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                    <div class="row">
+                        <div class="">
+                            <input type="radio" name="answers" value="1">
+                            الاجابة الاولى
+                        </div>
+                        <div class="">
+                                    <input type="radio" name="answers" value="2">
+                            الاجابة الثانية
+                    
+                        </div>
+                        <div class="">
+                                    <input type="radio" name="answers" value="3">
+                            الاجابة الثالثة
+                    
+                        </div>
+                        <div class="">
+                                    <input type="radio" name="answers" value="4">
+                            الاجابة الرابعة
+                    
+                        </div>
+                    
+                    </div>
+                    
+
+                </div>
+
+
+                <div class="row" style="font-size: 22px;">
+
+                    <div style="margin-top: 1rem;margin-right: auto;margin-left: 4rem;">
+                        <button type="submit" class="btn btn-danger"
+                            style="width: 250px;height:50px;font-size: 25px;">حذف السؤال</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

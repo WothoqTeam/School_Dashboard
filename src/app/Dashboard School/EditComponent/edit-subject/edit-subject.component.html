@@ -1,0 +1,50 @@
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="lastName" class="col-form-label col-sm-2 text-right">ID</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="id" class="form-control" />
+                <div *ngIf="editFormData.id.invalid &amp;&amp; (editFormData.id.dirty || editFormData.id.touched)"
+                    class="alert-danger">
+                    <span>Last name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">اسم الماده</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="name" class="form-control" />
+                <div *ngIf="editFormData.name.invalid &amp;&amp; (editFormData.name.dirty || editFormData.name.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+      
+        
+        <div>
+            <label style="margin-left: 20rem;">نوع الفصل الدراسي</label>
+
+          <div style="border: 0px solid rgb(182, 182, 182);widows: 60%;height: 50px;
+            font-size: 20px; border-radius: 10px;margin-top: -2.5rem;margin-right: 10rem;">
+            <!-- Default inline 1-->
+            <div class="form-check form-check-inline mt-2" [formGroup]="editForm" style="margin-left: 10rem;" >
+              <input type="radio" class="form-check-input" formControlName="semester" checked name="semester"
+                value="الاول"  >
+              <label class="form-check-label mr-2  " for="materialInline1">الترم الاول </label>
+            </div>
+            <!-- Material inline 2 -->
+            <div class="form-check form-check-inline  "  [formGroup]="editForm" style="margin-left: 10rem;">
+              <input type="radio" class="form-check-input" formControlName="semester" name="semester"
+                value="التانى">
+              <label class="form-check-label mr-1" for="materialInline2">الترم التانى </label>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer mt-5" >
+            <button [disabled]="isLoading" class="btn  mr-2" (click)="modal.close('Cancel')" style="background-color:  rgb(70, 184, 219);color: white;width:100px" >رجوع</button>
+            <button  [disabled]="isLoading" class="btn  mr-2" style="background-color:  rgb(70, 184, 219);color: white;width:100px"  >حفظ</button>
+        </div>
+ 
+    </form>
+</div>

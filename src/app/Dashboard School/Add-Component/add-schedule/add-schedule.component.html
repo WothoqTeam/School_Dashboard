@@ -1,0 +1,212 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+  <div class="infoContent">
+    <div id="addCosts" class="w3-container city w3-animate-opacity">
+      <div style="margin-top:1rem ;margin-right: 2rem;">
+        <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+            class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:black;font-family:Arial, Helvetica, sans-serif ;"> الجداول الدراسيه<i
+            class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة جدول دراسي
+        </span>
+      </div>
+      <hr style="width:95%;margin-top: 2rem;">
+      <form [formGroup]="issueForm" (ngSubmit)="submitForm()">
+
+        <div class="row" style="font-size: 22px;">
+          <div style="float: right;margin-right: 3rem;">
+            <label>اسم الجدول</label>
+            <form class="example form-group" [formGroup]="issueForm" style="width: 350px;margin-right: -30px;">
+              <input type="text" formControlName="name" style="height:50px;" class="form-control"
+                placeholder="اسم الجدول" name="year">
+              <button type="submit" style="width: 50px;"><i class="fas fa-clipboard-check"
+                  style="font-size: 25px;"></i></button>
+            </form>
+          </div>
+
+          <div style="float: right;margin-right: 2rem;">
+            <label>السنه الدراسيه</label>
+            <form class="example form-group" [formGroup]="issueForm" style="width: 350px;margin-right: -30px;">
+              <input type="text" style="height:50px; " formControlName="study_year" class="form-control"
+                placeholder="السنه الدراسيه " name="study_year">
+              <button type="submit" style="width: 50px;"><i class="fas fa-clipboard-check"
+                  style="font-size: 25px;"></i></button>
+            </form>
+          </div>
+          <div style="margin-right: 2rem;">
+            <label>المرحله الدراسيه</label>
+            <form class="form-inline example">
+              <div class="form-group">
+                <button type="submit" style="width: 50px;display: inline-block;">
+                  <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+                </button>
+              </div>
+              <div class="form-group" [formGroup]="issueForm">
+
+                <select class="form-control" placeholder="ادخل الفصل " style="width: 300px;height:50px; "
+                  formControlName="class_id">
+
+                  <option value="" disabled selected>اختر المرحله</option>
+                  <option *ngFor="let item of classLists" [value]="item.id">
+                    {{item.name}} - {{item.type}}
+                 </option>
+                  <i class="fas fa-angle-down text-info"></i>
+                </select>
+
+              </div>
+             
+            </form>
+          </div>
+        </div>
+        
+        <div style="margin-right: 1.5rem;font-size: 22px;">
+          <label>الفصل الدراسي</label>
+          <form class="form-inline example">
+            <div class="form-group">
+              <button type="submit" style="width: 50px;display: inline-block;">
+                <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+              </button>
+            </div>
+            <div class="form-group" [formGroup]="issueForm">
+
+              <select class="form-control" placeholder="ادخل الفصل " style="width: 275px;height:50px; "
+                formControlName="class_type_id">
+
+                <option value="" disabled selected>اختر الفصل</option>
+                <option *ngFor="let item of classtypeList" [value]="item.id">
+                  {{item.name}} - {{item.type}}
+               </option>
+                <i class="fas fa-angle-down text-info"></i>
+              </select>
+
+            </div>
+           
+          </form>
+        </div>
+        
+          <form [formGroup]="issueForm" style="margin-top: 3rem;background-color:yellow;" >
+           
+            <div formArrayName="SunRations" style="float: right;width: 100%;">
+              <h2>المواد الدراسيه(يوم الاحد)</h2>
+              <ul style="list-style: none;display: inline-block;">
+                <li *ngFor="let skill of SunRations.controls; let i=index" style="display: inline-block;">
+                  <div [formGroupName]="i" [formGroup]="issueForm" style="margin-right: 1rem;margin-top: 1rem;">
+                    <button class="btn " style="background-color: #c5dbe6;color: white;height: 39.7px;
+                          border-radius: 0%; line-height: 1;margin-top: -1px;
+                          border-top-right-radius:5px ;border-bottom-right-radius: 5px;">
+                      ({{i+1}})
+                    </button>
+                    <select formControlName="id" style="height: 40px;width: 200px">
+                      <option selected disabled>مادة الحصة {{i+1}}</option>
+                      <option *ngFor="let item of classList" [value]="item.id">{{item.subject.name}}</option>
+        
+                    </select>
+        
+                  </div>
+        
+        
+                </li>
+              </ul>
+            </div>
+        
+            <div formArrayName="MonRations" style="float: right;width: 100%;">
+              <h2>المواد الدراسيه(يوم الاثنين)</h2>
+              <ul style="list-style: none;">
+                <li *ngFor="let skill of MonRations.controls; let i=index" style="display: inline-block;">
+                  <div [formGroupName]="i" [formGroup]="issueForm" style="margin-right: 1rem;margin-top: 1rem;">
+                    <button class="btn " style="background-color: #c5dbe6;color: white;height: 39.7px;
+                          border-radius: 0%; line-height: 1;margin-top: -1px;
+                          border-top-right-radius:5px ;border-bottom-right-radius: 5px;">
+                      ({{i+1}})
+                    </button>
+                    <select formControlName="id" style="height: 40px;width: 200px">
+                      <option selected disabled>مادة الحصة {{i+1}}</option>
+                      <option *ngFor="let item of classList" [value]="item.id">{{item.subject.name}}</option>
+                    </select>
+                  </div>
+                </li>
+              </ul>
+            </div>
+        
+            <div formArrayName="TueRations" style="float: right;width: 100%;">
+              <h2>المواد الدراسيه(الثلاثاء)</h2>
+              <ul style="list-style: none;">
+                <li *ngFor="let skill of TueRations.controls; let i=index" style="display: inline-block;">
+                  <div [formGroupName]="i" [formGroup]="issueForm" style="margin-right: 1rem;margin-top: 1rem;">
+                    <button class="btn " style="background-color: #c5dbe6;color: white;height: 39.7px;
+                          border-radius: 0%; line-height: 1;margin-top: -1px;
+                          border-top-right-radius:5px ;border-bottom-right-radius: 5px;">
+                      ({{i+1}})
+                    </button>
+                    <select formControlName="id" style="height: 40px;width: 200px">
+                      <option selected disabled>مادة الحصة {{i+1}}</option>
+        
+                      <option *ngFor="let item of classList" [value]="item.id">{{item.subject.name}}</option>
+        
+                    </select>
+        
+                  </div>
+        
+        
+                </li>
+              </ul>
+            </div>
+        
+            <div formArrayName="WenRations" style="float: right;width: 100%;">
+              <h2>المواد الدراسيه(يوم الاربعاء)</h2>
+              <ul style="list-style: none">
+                <li *ngFor="let skill of WenRations.controls; let i=index" style="display: inline-block;">
+                  <div [formGroupName]="i" [formGroup]="issueForm" style="margin-right: 1rem;margin-top: 1rem;">
+                    <button class="btn" type="submit" style="background-color: #c5dbe6;color: white;height: 39.7px;
+                          border-radius: 0%; line-height: 1;margin-top: -1px;
+                          border-top-right-radius:5px ;border-bottom-right-radius: 5px;">
+                      ({{i+1}})
+                    </button>
+                    <select formControlName="id" style="height: 40px;width: 200px">
+                      <option selected disabled>مادة الحصة {{i+1}}</option>
+                      <option *ngFor="let item of classList" [value]="item.id">{{item.subject.name}}</option>
+                    </select>
+        
+                  </div>
+        
+        
+                </li>
+              </ul>
+            </div>
+        
+            <div formArrayName="ThrRations" style="float: right;width:100%">
+              <h2>المواد الدراسيه (يوم الخميس)</h2>
+              <ul style="list-style: none;">
+                <li *ngFor="let skill of ThrRations.controls; let i=index" style="display: inline-block;">
+                  <div [formGroupName]="i" [formGroup]="issueForm" style="margin-right: 1rem;margin-top: 1rem;">
+                    <button class="btn " style="background-color: #c5dbe6;color: white;height: 39.7px;
+                          border-radius: 0%; line-height: 1;margin-top: -1px;
+                          border-top-right-radius:5px ;border-bottom-right-radius: 5px;">
+                      ({{i+1}})
+                    </button>
+                    <select formControlName="id" style="width: 200px;height:40px;">
+                      <option selected disabled>مادة الحصة {{i+1}}</option>
+        
+                      <option *ngFor="let item of classList" [value]="item.id">{{item.subject.name}}</option>
+        
+                    </select>
+        
+                  </div>
+        
+        
+                </li>
+              </ul>
+            </div>
+          </form>
+        
+        <div>
+          <button type="submit" class="btn " style="color: white;float: left;margin-left: 2.5rem;margin-top: rem;
+                  font-size: 20px;width:215px;background-color:rgb(70, 184, 219);">اضافة الجدول الدراسي </button>
+        </div>
+        
+      </form>
+
+    </div>
+  </div>
+</div>

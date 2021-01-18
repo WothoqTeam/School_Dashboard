@@ -1,0 +1,67 @@
+<div class="modal-body" style="height: 50vh;">
+    <div class="row" style="background-color: rgb(179, 216, 216);margin-top: -1rem;">
+        <p style="margin-left: auto;margin-right: auto;margin-top: 25px;
+        font-size: 20px;font-family: 'Almarai', sans-serif;">تحديد اختبار</p>
+    </div>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm" style="margin-top: 2rem;">
+        <div style="float: right;margin-left: auto;margin-right: auto;">
+            <label style="margin-left: 13.5rem;font-family: 'Almarai', sans-serif;">اختر رقم الطلب </label>
+            <form class="form-inline example" style="margin-right: 5rem;">
+                <div class="form-group">
+                    <button type="submit" style="width: 50px;display: inline-block;">
+                        <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+                    </button>
+                </div>
+                <div class="form-group" [formGroup]="editForm">
+
+                    <select class="form-control"
+                        style="width: 250px;height:50px; " formControlName="id">
+
+                        <option value="" disabled selected> اختر رقم الطلب </option>
+                        <option *ngFor="let item of appList" [value]="item.id">
+                            {{item.id}}
+                        </option>
+                     
+                        <i class="fas fa-angle-down text-info"></i>
+                    </select>
+
+                </div>
+
+            </form>
+
+        </div>
+        <div style="float: right;margin-left: auto;margin-right: auto;margin-top: 2rem;">
+            <label style="margin-left: 15rem;font-family: 'Almarai', sans-serif;">اختر الامتحان </label>
+            <form class="form-inline example" style="margin-right: 5rem;">
+                <div class="form-group">
+                    <button type="submit" style="width: 50px;display: inline-block;">
+                        <i class="fas fa-pen" style="font-size: 25px;"></i>
+                        
+                    </button>
+                </div>
+                <div class="form-group" [formGroup]="editForm"  >
+
+                    <select class="form-control" name="exam_id"
+                        style="width: 250px;height:50px; " formControlName="exam_id">
+                      <option value="" disabled selected > الامتحان</option> 
+                      
+                        <option *ngFor="let item of examList" [value]="item.id">{{item.name}}</option>
+                       
+                        <i class="fas fa-angle-down text-info"></i>
+
+                    </select>
+
+                </div>
+                
+            </form>
+            <div class="modal-footer mt-4" style="border: none;" >
+                <button  [disabled]="isLoading" class="btn  " 
+                style="background-color:  rgb(70, 184, 219);font-family: 'Almarai', sans-serif;
+                color: white;width:300px;height: 50px;font-size: 18px;
+                margin-right: 4.2rem;"  >ارسال رابط الاختبار</button>
+            </div>
+        </div>
+      
+ 
+    </form>
+</div>

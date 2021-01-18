@@ -1,0 +1,71 @@
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="lastName" class="col-form-label col-sm-2 text-right">ID</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="id" class="form-control" />
+                <div *ngIf="editFormData.id.invalid &amp;&amp; (editFormData.id.dirty || editFormData.id.touched)"
+                    class="alert-danger">
+                    <span>Last name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">اسم المدرس</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="teacher_id" class="form-control" />
+                <div *ngIf="editFormData.teacher_id.invalid &amp;&amp; (editFormData.teacher_id.dirty || editFormData.teacher_id.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">اسم الماده</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="subject_id" class="form-control" />
+                <div *ngIf="editFormData.subject_id.invalid &amp;&amp; (editFormData.subject_id.dirty || editFormData.subject_id.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">المرحله الدراسيه </label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="class_id" class="form-control" />
+                <div *ngIf="editFormData.class_id.invalid &amp;&amp; (editFormData.class_id.dirty || editFormData.class_id.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">المرحله الدراسيه </label>
+            <div class="col-sm-5">
+                <input type="datetime-local" formControlName="start_time" class="form-control" />
+                <div *ngIf="editFormData.start_time.invalid &amp;&amp; (editFormData.start_time.dirty || editFormData.start_time.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">المرحله الدراسيه </label>
+            <div class="col-sm-5">
+                <input type="datetime-local" formControlName="end_time" class="form-control" />
+                <div *ngIf="editFormData.end_time.invalid &amp;&amp; (editFormData.end_time.dirty || editFormData.end_time.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+    
+        
+        <div class="modal-footer" >
+            <button [disabled]="isLoading" class="btn  mr-2" (click)="modal.close('Cancel')" style="background-color:  rgb(70, 184, 219);color: white;width:100px" >رجوع</button>
+            <button  [disabled]="isLoading" class="btn  mr-2" style="background-color:  rgb(70, 184, 219);color: white;width:100px"  >حفظ</button>
+        </div>
+ 
+    </form>
+</div>

@@ -1,0 +1,183 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+  <div class="infoContent">
+    <div id="Fade11" class="w3-container city w3-animate-opacity">
+      <div style="margin-top:1rem ;margin-right: 2rem;">
+        <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+            class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> تعديل الصفحة
+          الشخصيه</span>
+      </div>
+      <hr style="width:95%;margin-top: 2rem;">
+      <form>
+      
+        <label for="fileToUpload">
+          <div class="profile-pic" style="background-image: url('');
+          background-color: rgb(112, 127, 134);border: 2px solid rgb(47, 53, 47);" >
+              <span class="glyphicon glyphicon-camera"></span>
+              <span>Change Image</span>
+          </div>
+          </label>
+          <input type="File" name="fileToUpload" id="fileToUpload">
+
+        <div class="form-group " style="margin-right: 13rem;margin-top:-10rem;">
+
+          <label> اسم المدرسه</label>
+          <div class="inputWithIcon inputIconBg" style="width: 84%;">
+            <span>
+              <i class="fas fa-school "></i>
+            </span>
+            <input type="text" class=" text-right form-control " name="name" placeholder="ادخل اسم المدرسه " required
+              autofocus>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group " style="margin-right: 13rem;">
+
+              <label> رقم الهاتف</label>
+              <div class="inputWithIcon inputIconBg" style="width: 100%;">
+                <span>
+                  <i class="fas fa-mobile-alt"></i>
+                </span>
+                <input type="password" name="mobile" class=" text-right form-control " placeholder="ادخل رقم الهاتف "
+                  required autofocus>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group ">
+
+              <label>رقم الهاتف الاخر</label>
+              <div class="inputWithIcon inputIconBg" style="width: 71%;">
+                <span>
+                  <i class="fas fa-mobile-alt"></i>
+                </span>
+                <input type="password" class=" text-right form-control " name="mobile"
+                  placeholder="ادخل رقم الهاتف الاخر " required autofocus>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+
+            <label style="margin-right: 0.5rem;"> نبذه مختصره</label><br><br>
+            <div class="form-group ">
+              <div class="inputWithIcon inputIconBg" style="width: 86%;margin-top: -1.5rem;">
+                <span>
+                  <i class="fas fa-school "></i>
+                </span>
+                <input type="text"  class=" text-right form-control " name="about" placeholder="ادخل نبذه مختصره عن المدرسه "
+                  required autofocus>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <div class="form-group ">
+              <label>عنوان المدرسة</label>
+              <div class="inputWithIcon inputIconBg" >
+                <span style="width: 15%;">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                <input type="text" name="address" class=" text-right form-control " placeholder="ادخل عنوان المدرسه "
+                  required autofocus style="width: 80%;">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group ">
+
+              <label>الحى</label>
+              <div class="inputWithIcon inputIconBg">
+                <span style="width: 20%;">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                <input type="text" class=" text-right form-control " name="district"
+                  placeholder="ادخل اسم الحي " required autofocus style="width: 80%;">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="form-group ">
+              <label> المدينه</label>
+              <div class="inputWithIcon inputIconBg" >
+                <span style="width: 13%;">
+                  <i class="fas fa-map-marker-alt"></i>
+                </span>
+                <input type="text" name="city" class=" text-right form-control " placeholder="ادخل اسم المدينه " required
+                  autofocus style="width: 80%;">
+              </div>
+
+            </div>
+          </div>
+          <hr style="width:95%;">
+          <div   style="margin-right: auto;">
+              <div class="toggle-container">
+                  <div class="btn-group btn-toggle">
+                      <button class="btn btn-md btn-dark active" style="font-size: 25px;">بنين</button>
+                      <button class="btn btn-md btn-default" style="font-size: 25px;">بنات</button>
+                  </div>
+              </div>
+          </div>
+          <div>
+              <p
+                  style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;margin-top: -3rem ;margin-right: 2rem;color: gray;">
+                  الاقسام الدراسية</p>
+              <ul>
+                  <li style="font-size:25px;color: mediumturquoise;">رياض الاطفال ( 4 مراحل )</li>
+                  <div class="vLine">
+
+                  </div>
+                  <span>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الاولي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الثانيه</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الثالثه</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الرابعه</a>
+                  </span>
+                  <br>
+                  <li style="font-size:25px;color: mediumturquoise;margin-top: 2rem;">الإبتدائية ( 6 مراحل )</li>
+                  <div class="vLine">
+
+                  </div>
+                  <span>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">اولى ابتدائي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثانى ابتدائي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثالث ابتدائي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">رابع ابتدائي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">خامس ابتدائي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">سادس ابتدائي</a>
+                  </span>
+                  <li style="font-size:25px;color: mediumturquoise;margin-top: 2rem;">المتوسطة ( 3 مراحل )</li>
+                  <span>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">اولى متوسط</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثانى متوسط</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثالث متوسط</a>
+
+                  </span>
+                  <div class="vLine">
+
+                  </div>
+                  <li style="font-size:25px;color: mediumturquoise;margin-top: 2rem;">الثانويه ( 3 مراحل )</li>
+                 
+                  <span>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">اولى ثانوى</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثانى ثانوي</a>
+                      <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثالث ثانوى</a>
+                    
+                  </span>
+              </ul>
+
+
+          </div>
+
+        
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,372 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addbranch" class="w3-container city w3-animate-opacity" style="width: 100%;" >
+            <div style="margin-top:1rem ;">
+                <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;"> الصفحة الرئيسيه <i
+                        class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:black;font-family:Arial, Helvetica, sans-serif ;"> نظام التسجيل
+                    <i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i> </span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة
+                    طلب جديد </span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <form [formGroup]="issueForm" (ngSubmit)="submitForm()" >
+               
+                <div class="row" style="font-size: 22px;margin-bottom: 1rem;">
+                    <div style="float: right;margin-right: 3rem;">
+                      <label>السنه الدراسيه</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 350px;margin-right: -30px;">
+                        <input type="text" formControlName="study_year" style="height:50px;" class="form-control"
+                          placeholder="ادخل السنه الدراسيه" name="study_year">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-calendar-alt"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+                   
+                    <div style="float: right;margin-right: 1rem;">
+                      <label>الجنس</label>
+                      <form class="form-inline example">
+                        <div class="form-group">
+                          <button type="submit" style="width: 50px;display: inline-block;">
+                            <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+                          </button>
+                        </div>
+                        <div class="form-group" [formGroup]="issueForm">
+          
+                          <select class="form-control" style="width: 300px;height:50px;" formControlName="gender"
+                            (change)="onChange($event)">
+          
+                            <option value="" disabled selected> اختر الجنس</option>
+          
+                            <option value="بنات" style=""> بنات</option>
+          
+                            <option value="بنين" style="">بنين</option>
+          
+                            <i class="fas fa-angle-down text-info"></i>
+                          </select>
+                        </div>
+          
+                      </form>
+                    </div>
+          
+                    <div style="float: right;margin-right: 1rem;">
+                      <label>الفصل</label>
+                      <form class="form-inline example">
+                        <div class="form-group">
+                          <button type="submit" style="width: 50px;display: inline-block;">
+                            <i class="fas fa-user-graduate" style="font-size: 25px;"></i>
+                          </button>
+                        </div>
+                        <div class="form-group" [formGroup]="issueForm">
+          
+                          <select class="form-control" style="width: 300px;height:50px;" formControlName="class_id">
+                            <option value="" disabled selected>اختر الفصل</option>
+                            <option *ngFor="let item of filterdArray" [value]="item.id">
+                              {{item.name}}
+                            </option>
+                            <i class="fas fa-angle-down text-info"></i>
+                          </select>
+          
+                        </div>
+          
+                      </form>
+                    </div>
+                </div>
+                <div class="row" style="font-size: 22px;margin-bottom: 1rem;">
+                    <div style="float: right;margin-right: 3rem;">
+                      <label>اسم الوالد</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 350px;margin-right: -30px;">
+                        <input type="text" formControlName="father_full_name" style="height:50px;" class="form-control"
+                          placeholder="ادخل اسم الوالد" name="father_full_name">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-user-circle"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+                   
+                    <div style="float: right;margin-right: 1rem;">
+                      <label>الجنسيه</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 380px;margin-right: -30px;">
+                        <input type="text" formControlName="nationality" style="height:50px;" class="form-control"
+                          placeholder="ادخل الجنسيه" name="nationality">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-flag"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+          
+                    <div style="float: right;margin-right:1.5rem;">
+                      <label>رقم الهويه</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 370px;margin-right: -30px;">
+                        <input type="text" formControlName="father_national_id" style="height:50px;" class="form-control"
+                          placeholder="ادخل رقم الهويه" name="father_national_id">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-id-card"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+                   
+                </div>
+                <div class="row" style="font-size: 22px;margin-bottom: 1rem;">
+                    <div style="float: right;margin-right: 3rem;">
+                      <label> رقم الهاتف</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 350px;margin-right: -30px;">
+                        <input type="text" formControlName="mobile" style="height:50px;" class="form-control"
+                          placeholder="ادخل  رقم الهاتف" name="mobile">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-mobile"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+                   
+                    <div style="float: right;margin-right: 1rem;">
+                      <label>البريد الالكترونى </label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 380px;margin-right: -30px;">
+                        <input type="text" formControlName="email" style="height:50px;" class="form-control"
+                          placeholder="ادخل البريد الالكترونى" name="email">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-envelope"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+          
+                   
+                </div>
+                <div class="row" style="font-size: 22px;margin-bottom: 1rem;">
+                    <div style="float: right;margin-right: 3rem;">
+                      <label>اسم الطالب</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 350px;margin-right: -30px;">
+                        <input type="text" formControlName="student_name" style="height:50px;" class="form-control"
+                          placeholder="ادخل اسم الطالب" name="student_name">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-user-circle"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+                   
+                    <div style="float: right;margin-right: 1rem;">
+                      <label>الجنسيه</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 380px;margin-right: -30px;">
+                        <input type="text" formControlName="nationality" style="height:50px;" class="form-control"
+                          placeholder="ادخل الجنسيه" name="nationality">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-flag"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+          
+                    <div style="float: right;margin-right:1.5rem;">
+                      <label>رقم الهويه</label>
+                      <form class="example form-group" [formGroup]="issueForm" style="width: 370px;margin-right: -30px;">
+                        <input type="text" formControlName="student_national_id" style="height:50px;" class="form-control"
+                          placeholder="ادخل رقم الهويه" name="student_national_id">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-id-card"
+                            style="font-size: 25px;"></i></button>
+                      </form>
+                    </div>
+                   
+                </div>
+                <div class="row" style="float: right;margin-top: 1rem;margin-bottom: 1rem;">
+                    <div style="float: right;margin-right: 4rem;">
+                        <label style="margin-right: -1.5rem;font-size: 20px;">تاريخ الميلاد</label>
+                        <form class="example form-group" [formGroup]="issueForm" style="width: 330px;margin-right: -30px;">
+                          <input type="date" formControlName="date_of_birth" style="height:50px;" class="form-control"
+                            placeholder="حدد تاريخ الميلاد" name="date_of_birth">
+                          
+                        </form>
+                      </div>
+                      <div style="float: right;margin-right: -0.5rem;">
+                        <label style="font-size: 20px;margin-right: 1.5rem;">مكان الميلاد </label>
+                        <form class="example form-group" [formGroup]="issueForm" style="width: 370px;">
+                            <input type="text" style="height:50px" formControlName="place_of_birth" class="form-control"
+                                placeholder="ادخل مكان الميلاد " name="place_of_birth">
+                            <button type="submit" style="width: 50px;"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="row text-right mb-2 " style="font-size: 22px;color: black;float: right;width: 100%;">
+                    <div class="col-md-3" style="margin-right: 2rem;">
+                      نوع السنه الدراسيه
+                    </div> 
+                
+                    <div class="col-md-1 " style="margin-right: 4rem;">
+                      المواصلات
+                    </div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 " style="display:inline-block;margin-right: 5.5rem;" *ngIf="!radio.checked">
+                        طبيعة المواصلات
+                    </div>
+                  </div>
+                <div class="row" style="float: right;margin-top: rem;">
+                  
+                    <div style="border: 1px solid rgb(182, 182, 182);width:330px;height: 60px;
+                      font-size: 20px; border-radius: 10px;margin-right: 2rem;">
+                      
+                      <!-- Default inline 1-->
+          
+                      <div class="form-check form-check-inline mt-3" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="study_type" checked name="study_type"
+                          value="ترم">
+                        <label class="form-check-label mr-2" for="materialInline1">نصف ترم</label>
+                      </div>
+          
+                      <!-- Material inline 2 -->
+                      <div class="form-check form-check-inline " style="margin-right: 6rem;" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="study_type" name="study_type"
+                          value="عام كامل">
+                        <label class="form-check-label mr-2" for="materialInline2">ترم كامل</label>
+                      </div>
+                    </div>
+                    <div style="border: 1px solid rgb(182, 182, 182);width:350px;height: 60px;display:inline-block;
+                                font-size: 20px;margin-right: 1rem;border-radius: 10px;">
+                      <div class="form-check form-check-inline mt-3" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="bus" checked name="bus"
+                          value="بمواصلات">
+                        <label class="form-check-label mr-2" for="materialInline1">باص </label>
+                      </div>
+                      <div class="form-check form-check-inline " style="margin-right: 7rem;" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="bus" 
+                        name="bus" value="بدون مواصلات" #radio>
+                        <label class="form-check-label mr-2" for="materialInline2">   بدون باص</label>
+                      </div>
+                    </div>
+                    <div style="border: 1px solid rgb(182, 182, 182);width:345px;height: 60px;
+                                display:inline-block;font-size: 20px;border-radius: 10px;margin-right: 1rem;" *ngIf="!radio.checked">
+                      <div class="form-check form-check-inline mt-3" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="trip" checked name="trip"
+                          value="ذهاب وعودة">
+                        <label class="form-check-label mr-2" for="materialInline1">ذهاب وعوده</label>
+                      </div>
+          
+                      <div class="form-check form-check-inline mr-5" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="trip" name="trip" value="ذهاب او عودة فقط">
+                        <label class="form-check-label mr-2" for="materialInline2"> ذهاب او عوده فقط</label>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="row" style="float: right;">
+                  
+                  <p style="margin-top: 1rem;margin-right: 2rem;font-size: 22px;">الحاله الصحيه للطالب</p>
+               
+                    <div style="border: 1px solid rgb(182, 182, 182);width:300px;height: 60px;
+                      font-size: 20px; border-radius: 10px;margin-right:-10rem;margin-top: 4rem;">
+                      
+                      <!-- Default inline 1-->
+          
+                      <div class="form-check form-check-inline mt-3" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="health_status" checked
+                         name="health_status"
+                          value="جيد">
+                        <label class="form-check-label mr-2" for="materialInline1"> جيده</label>
+                      </div>
+          
+                      <!-- Material inline 2 -->
+                      <div class="form-check form-check-inline " style="margin-right: 6rem;" [formGroup]="issueForm">
+                        <input type="radio" class="form-check-input" formControlName="health_status" name="health_status"
+                          value="مريض">
+                        <label class="form-check-label mr-2" for="materialInline2">مريض</label>
+                      </div>
+                    </div>
+                  </div>
+                <div class="formFiles" >
+                    <div class="head" style="margin-top: 27rem;">
+                       <p style="margin-top: 2rem;margin-right: 1rem;font-size: 20px;">المرفقات</p> 
+                    </div>
+                    <div class="form-group mr-1">
+                        <label class="filelabel">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span class="title">
+                                دفتر العائلة
+                            </span>
+                            <input class="frmFileInput" id="family" name="civil_status_book" type="file"
+                                (change)="onFamilySelect($event)" />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                        <label class="filelabel">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span class="title">
+                                شهادة التطعيم
+                            </span>
+                            <input class="frmFileInput" id="graft" name="certificate_of_vaccination" type="file"
+                                (change)="onGraftSelect($event)" />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                        <label class="filelabel">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span class="title">
+                                شهادة الميلاد
+                            </span>
+                            <input class="frmFileInput" id="birthPaper" name="certificate_of_birth" type="file"
+                                (change)="onBirthPaperSelect($event)" />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                        <label class="filelabel">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span class="title">
+                                صورة الهوية للطالب
+                            </span>
+                            <input class="frmFileInput" id="studentPic" name="student_national_id_photo" type="file"
+                                (change)="onStudentPicSelect($event)" />
+                        </label>
+                    </div>
+                    <!--  -->
+                    <div class="form-group">
+                        <label class="filelabel">
+                            <i class="fa fa-camera" aria-hidden="true"></i>
+                            <span class="title">
+                                صورة الهوية للوالد
+                            </span>
+                            <input class="frmFileInput" id="parentPic" name="father_national_id_photo" type="file"
+                                (change)="onParentPicSelect($event)" />
+                        </label>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="bill">
+                    <button class="btn" style="float: left;margin-left: 7rem;background-color:rgb(70, 184, 219);
+                    font-family: 'Cairo', sans-serif;color: white;width:250px;margin-top: 10rem;"
+                    data-toggle="modal" data-target="#billModal">اظهار الفاتوره</button>
+                </div>
+            </form>
+                            <!-- Modal -->
+                            <div *ngIf="showModal" class="modal fade in" aria-hidden="true" id="billModal" tabindex="-1" role="dialog" aria-labelledby="billModal" 
+                            style="display: block;opacity: 1;background-color: rgba(0, 0, 0, 0.5);">
+                            
+                                <div class="modal-dialog modal-dialog-centered"  role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: rgb(168, 196, 207);
+                                        font-family: 'Almarai', sans-serif;">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">
+                                                فاتورة الطلب
+                                            </h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="cost">
+                                                <span>الرسوم الدراسية</span>
+                                                <span>{{ cost }}</span>
+                                            </div>
+                                            <div class="tax">
+                                                <span>الضريبة المضافة</span>
+                                                <span>{{ tax }}</span>
+                                            </div>
+                                            <div class="total_cost">
+                                                <span>الاجمالي</span>
+                                                <span>{{ total_cost }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn" (click)="closeModal()">
+                                            تقديم الطلب
+                                        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /Modal -->
+        </div>
+    </div>
+</div>

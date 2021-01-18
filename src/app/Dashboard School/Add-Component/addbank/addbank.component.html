@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addNew" class="w3-container city w3-animate-opacity" >
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+              <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+                  class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+              <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;">  قائمة البنوك <i
+                  class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+              <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة بنك</span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+        
+            <form [formGroup]="bankForm" (ngSubmit)="submitFormBank()">
+        
+              <div style="float: right;">
+                <label style="margin-right: 2rem;">اسم البنك</label>
+                <form class="example form-group" [formGroup]="bankForm" style="width: 550px;margin-right: -1rem;">
+                  <input type="text" style="height:50px;" formControlName="name" class="form-control"
+                    placeholder="ادخل اسم البنك" name="search2">
+                  <button type="submit" style="width: 70px;"><i class="fas fa-university" style="font-size: 25px;"></i></button>
+                </form>
+              </div>
+              <div style="float: right;">
+                <label style="margin-right: 3rem;">IBAN </label>
+                <form class="example form-group" [formGroup]="bankForm" style="width: 550px;margin-right: -2rem;">
+                  <input type="text" style="height:50px" formControlName="iban" class="form-control" placeholder="ادخل  IBAN "
+                    name="search2">
+                  <button type="submit" style="width: 70px;"><i class="fas fa-university" 
+                    style="font-size: 25px;"></i></button>
+                </form>
+              </div>
+        
+              <div>
+                <button type="submit" class="btn "
+                  style="color: white;float: left;margin-left: 4rem;font-size: 20px;width:300px;
+                  background-color:rgb(70, 184, 219);margin-top: 2rem;">حفظ</button>
+              </div>
+        
+        
+            </form>
+          </div>
+    </div>
+</div>

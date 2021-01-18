@@ -1,0 +1,56 @@
+.formFiles .head {
+    display: block;
+    text-align: right;
+    color: #000000c7;
+    border-top: 1px solid #ced4da;
+    border-bottom: 0;
+    font-weight: 600;
+}
+
+.filelabel {
+    width: 100%;
+    border: 2px dashed #78bde7;
+    border-radius: 5px;
+    display: block;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    height: 120px;
+    padding-top: 1.5rem;
+}
+
+.filelabel i {
+    display: block;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.filelabel .title {
+    color: grey;
+    transition: 200ms color;
+}
+
+.filelabel i {
+    color: #78bde7;
+    transition: 200ms color;
+}
+
+.filelabel:hover {
+    border: 2px solid #78bde7;
+}
+
+.filelabel:hover i,
+.filelabel:hover .title {
+    color: #78bde7;
+}
+
+.frmFileInput {
+    display: none;
+}
+.formFiles .form-group {
+    display: inline-block;
+    width: 21%;
+    float: right;
+    margin-left: 2rem;
+}

@@ -1,0 +1,91 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addCosts" class="w3-container city w3-animate-opacity" >
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+              <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+                  class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+              <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الامتحانات<i
+                  class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+              <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة امتحان</span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <form [formGroup]="examForm" (ngSubmit)="submitFormExam()">
+              
+            <div class="row" style="font-size: 22px;">
+                <div style="float: right;margin-right: 3rem;">
+                    <label>اسم الامتحان</label>
+                    <form class="example form-group" [formGroup]="examForm" style="width: 350px;margin-right: -30px;">
+                        <input type="text" formControlName="name" style="height:50px;" class="form-control"
+                            placeholder="اسم الامتحان" name="year">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-clipboard-check"
+                                style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+                <div style="float: right;margin-right: 1rem;">
+                    <label>الفصل</label>
+                    <form class="form-inline example" >
+                        <div class="form-group" >
+                          <button type="submit" style="width: 50px;display: inline-block;">
+                            <i class="fas fa-user-graduate"
+                            style="font-size: 25px;"></i>
+                          </button>
+                        </div>
+                        <div class="form-group" [formGroup]="examForm" >
+                            
+                          <select class="form-control" placeholder="ادخل الفصل "  style="width: 300px;height:50px; " formControlName="class_id">
+                          
+                            <option value="" disabled selected>اختر الفصل</option>
+                            <option *ngFor="let item of classList" [value]="classList.id">
+                                {{item.name}}
+                                </option>
+                                <i class="fas fa-angle-down text-info" ></i>
+                          </select>
+                       
+                        </div>
+                  
+                      </form>
+                </div>
+                <div style="float: right;margin-right: 2rem;">
+                    <label>عدد المحاولات</label>
+                    <form class="example form-group" [formGroup]="examForm" style="width: 350px;margin-right: -30px;">
+                        <input type="text" style="height:50px; " formControlName="number_of_attempts" class="form-control"
+                            placeholder="عدد المحاولات " name="number_of_attempts">
+                            <button type="submit" style="width: 50px;"><i class="fas fa-clipboard-check"
+                                style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+            </div>
+
+          
+            <div class="row" style="font-size: 22px;margin-top: 1rem;">
+                <div style="float: right;margin-right: 3rem;">
+                  <label>مدة الامتحان</label>
+                  <form class="example form-group" [formGroup]="examForm" style="width: 350px;margin-right: -30px;">
+                      <input type="text" formControlName="exam_timer" style="height:50px;"  class="form-control"
+                          placeholder="مدة الامتحان" name="exam_timer">
+                      <button type="submit" style="width: 50px;"><i class="fas fa-clock"
+                              style="font-size: 25px;"></i></button>
+                  </form>
+              </div>
+              <div style="float: right;margin-right: 1.5rem;">
+                  <label >صلاحية الرابط</label>
+                  <form class="example form-group" [formGroup]="examForm" style="width: 370px;margin-right: -30px;">
+                      <input type="text" style="height:50px;" formControlName="exam_validity" class="form-control"
+                          placeholder="صلاحية الرابط " name="exam_validity">
+                      <button type="submit" style="width: 50px;"><i class="fas fa-link"
+                              style="font-size: 25px;"></i></button>
+                  </form>
+              </div>
+              <div style="margin-top: 2.5rem;" >
+              <button type="submit" class="btn " 
+              [routerLink]="['/school/exam/addexam/addquestion']" routerLinkActive="router-link-active"  
+              style="width: 330px;height:50px;font-size: 25px;margin-right: 1.5rem;background-color:rgb(70, 184, 219);color: white;">متابعه</button>
+            </div>
+            </div>
+            
+            </form>
+          </div>
+    </div>
+</div> 

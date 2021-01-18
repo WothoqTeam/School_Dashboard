@@ -1,0 +1,63 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="Fade7" class="w3-container city w3-animate-opacity" >
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+              <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+                  class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+              <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> طلبات التسجيل</span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <div>
+        
+              <span style="float: right;">
+        
+                <form class="example" style="max-width:300px;">
+                  <input type="text" placeholder="اختر" name="search2">
+                  <button><i class="fas fa-pen"></i></button>
+                </form>
+              </span>
+              <span style="float: right;margin-right: 1rem;margin-bottom: 2rem;">
+                <form class="example" style="max-width:300px;">
+                  <input type="text" placeholder="البحث" name="name"   (keydown)="filterBranch($event)">
+                  <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+              </span>
+        
+            <table class="table  text-center" style="width: 95%;">
+              <thead>
+                <tr>
+                  <th>#  </th>
+                  <th>أسم المستخدم  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                  <th>اسم الوالد <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                  <th>النوع <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                  <th> السنه الدراسيه  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                  <th>العام الدراسي <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                  <th>معاينه  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let item of userList ; let i=index">
+                <tr  *ngFor="let item1 of item.application ; let i=index">
+                  <th scope="row">{{i+1}}</th>
+                  <td>{{item.name}}</td>
+                  <td>{{item1.father_full_name}}</td>
+                  <td>{{item1.gender}}</td>
+                  <td>{{item1.study_type}}</td>
+                  <td>{{item1.study_year}}</td>
+                  <td><button type="button" class="btn  ml-1"  (click)="editItem(item)"
+                           style="color: white;background-color:rgb(70, 184, 219);"  data-toggle="modal" data-target="#exampleModal"
+                         >
+                      <i  class="fas fa-eye" style="font-size: 18px;"></i></button> </td>
+        
+                </tr>
+        
+              </tbody>
+            </table>
+              <!--Table-->
+            </div>
+          </div>
+    </div>
+</div>
+
+    

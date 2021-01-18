@@ -1,0 +1,51 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addbranch" class="w3-container city w3-animate-opacity" style="width: 100%;" >
+            <div style="margin-top:1rem ;">
+                <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;"> الصفحة الرئيسيه <i
+                        class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الفروع
+                    <i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i> </span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة
+                    فرع </span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <form [formGroup]="issueForm" (ngSubmit)="submitForm()">
+
+                <div style="float: right;">
+                    <label style="margin-right: 1rem;">اسم الفرع</label>
+                    <form class="example form-group" [formGroup]="issueForm" style="width: 550px;margin-right: -3rem;">
+                        <input type="text" style="height:50px;" formControlName="name" class="form-control"
+                            placeholder="ادخل اسم الفرع" name="search2">
+                        <button type="submit" style="width: 50px;"><i class="fas fa-school"
+                                style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+                <div style="float: right;margin-right: 1rem;">
+                    <label>الحى </label>
+                    <form class="example form-group" [formGroup]="issueForm" style="width: 255px;">
+                        <input type="text" style="height:50px" formControlName="district" class="form-control"
+                            placeholder="ادخل اسم الحى " name="search2">
+                        <button type="submit"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+                <div style="float: right;margin-right: 1rem;">
+                    <label>المدينه </label>
+                    <form class="example form-group" [formGroup]="issueForm" style="width: 255px;">
+                        <input type="text" style="height:50px" formControlName="city" class="form-control"
+                            placeholder="ادخل اسم المدينه" name="search2">
+                        <button type="submit"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+                <div>
+                    <button type="submit" class="btn "
+                        style="color: white;float: left;margin-left: 5rem;font-size: 20px;width:295px;background-color:rgb(70, 184, 219);">حفظ</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

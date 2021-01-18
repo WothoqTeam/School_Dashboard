@@ -1,0 +1,63 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="Fade6" class="w3-container city w3-animate-opacity">
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+                <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+                        class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> المقابلة
+                    الشخصيه</span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <div>
+                <span style="float: right;">
+
+                    <form class="example" style="max-width:300px;">
+                        <input type="text" placeholder="اختر" name="search2">
+                        <button><i class="fas fa-pen"></i></button>
+                    </form>
+                </span>
+                <span style="float: right;margin-right: 1rem;margin-bottom: 2rem;">
+                    <form class="example" style="max-width:300px;">
+                        <input type="text" placeholder="البحث" name="search2">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </span>
+
+                <!--Table-->
+                <table class="table table-striped text-center " style="width: 95%;">
+
+                    <!--Table head-->
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>رقم الطلب <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                            <th>التاريخ <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                            <th>الوقت <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+                            <th>رابط المقابله <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+
+                        </tr>
+                    </thead>
+                    <!--Table head-->
+
+                    <!--Table body-->
+                    <tbody>
+                        <tr class="table-info" *ngFor="let item of interviewList;let i=index;">
+                            <th scope="row">{{i+1}}</th>
+                            <td>{{item.application.id}}</td>
+                            <td>{{item.date}}</td>
+                            <td>{{item.time}}</td>
+                            <td><a href="{{item.link}}">ادخل على رابط المقابلة</a></td>
+                        </tr>
+
+                    </tbody>
+                    <!--Table body-->
+
+
+                </table>
+                <!--Table-->
+            </div>
+        </div>
+    </div>
+</div>

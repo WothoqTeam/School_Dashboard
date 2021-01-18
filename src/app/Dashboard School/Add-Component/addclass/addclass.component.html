@@ -1,0 +1,124 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addClass" class="w3-container city w3-animate-opacity">
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+              <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;"> الصفحة الرئيسيه <i
+                  class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+              <span style="font-size: 25px;color:black;font-family:Arial, Helvetica, sans-serif ;"> الحصص الدراسيه
+                  <i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i> </span>
+              <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة حصه دراسيه </span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <form [formGroup]="ClassForm" (ngSubmit)="submitFormClass()">
+              <div style="float: right;margin-right: 1rem;">
+                <label  style="font-family: 'Almarai', sans-serif;">  المدرس</label>
+                <form class="form-inline example" >
+                    <div class="form-group" >
+                      <button type="submit" style="width: 50px;">
+                        <i class="fas fa-user-graduate"
+                        style="font-size: 25px;"></i>
+                      </button>
+                    </div>
+                    <div class="form-group" [formGroup]="ClassForm" >
+                        
+                      <select class="form-control"   style="width: 430px;height:50px; " 
+                      formControlName="teacher_id">
+                      
+                        <option value="" disabled selected>اختر المدرس </option>
+                        <option *ngFor="let item of teacherList" [value]="item.id">
+                            {{item.name}}
+                            </option>
+                            <i class="fas fa-angle-down text-info" ></i>
+                      </select>
+                   
+                    </div>
+              
+                  </form>
+            </div>
+            <div style="float: right;margin-right: 1rem;">
+                <label  style="font-family: 'Almarai', sans-serif;">المادة الدراسية </label>
+                <form class="form-inline example" >
+                    <div class="form-group" >
+                      <button type="submit" style="width: 50px;">
+                        <i class="fas fa-user-graduate"
+                        style="font-size: 25px;"></i>
+                      </button>
+                    </div>
+                    <div class="form-group" [formGroup]="ClassForm" >
+                        
+                      <select class="form-control"   style="width: 430px;height:50px; " formControlName="subject_id">
+                      
+                        <option value="" disabled selected>اختر الماده الدراسيه</option>
+                        <option *ngFor="let item of subList" [value]="item.id">
+                            {{item.name}}
+                            </option>
+                            <i class="fas fa-angle-down text-info" ></i>
+                      </select>
+                   
+                    </div>
+              
+                  </form>
+           
+            </div>
+            <div class="row" style="float: right;margin-top: 1rem;">
+              <div style="float: right;margin-right: 2rem;">
+                <label  style="font-family: 'Almarai', sans-serif;"> الفصل الدراسي  </label>
+                <form class="form-inline example" >
+                    <div class="form-group" >
+                      <button type="submit" style="width: 50px;">
+                        <i class="fas fa-user-graduate"
+                        style="font-size: 25px;"></i>
+                      </button>
+                    </div>
+                    <div class="form-group" [formGroup]="ClassForm" >
+                        
+                      <select class="form-control"   style="width: 300px;height:50px; " formControlName="class_id">
+                      
+                        <option value="" disabled selected>اختر الفصل الدراسي</option>
+                        <option *ngFor="let item of classList" [value]="item.id">
+                            {{item.name}} - {{item.type}}
+                            </option>
+                            <i class="fas fa-angle-down text-info" ></i>
+                      </select>
+                   
+                    </div>
+              
+                  </form>
+           
+              </div>
+              <form class="example form-group" [formGroup]="ClassForm" 
+              style="width: 312px;margin-right: 1rem;"> 
+              <label  style="margin-right:-3rem;font-family: 'Almarai', sans-serif;">  بداية الحصه الدراسيه </label>
+              <button type="submit"  style="width: 50px;float: right;margin-top: 2rem;">
+                  <i class="fas fa-calendar-alt" style="font-size: 25px;"></i>
+              </button>
+              <span style="display: inline-block;margin-left: 0.8rem;">
+                <input type="datetime-local" style="height:50px;float: right;width: 250px;" formControlName="start_time" class="form-control"
+                 name="search2" >
+              </span>
+              </form>
+              <form class="example form-group" [formGroup]="ClassForm" 
+              style="width: 312px;margin-right: rem;"> 
+              <label  style="margin-right:-3rem;font-family: 'Almarai', sans-serif;"> نهاية الحصه الدراسيه  </label>
+              <button type="submit"  style="width: 50px;float: right;margin-top: 2rem;">
+                  <i class="fas fa-calendar-alt" style="font-size: 25px;"></i>
+              </button>
+              <span style="display: inline-block;margin-left: 0.8rem;">
+                <input type="datetime-local" style="height:50px;float: right;width: 250px;" formControlName="end_time" class="form-control"
+                   name="search2" >
+              </span>
+              </form>
+          </div>
+              <div>
+                <button type="submit" class="btn "
+                  style="color: white;float: left;margin-left: 8rem;font-size: 20px;margin-top: 2rem
+                  ;width:300px;background-color:rgb(70, 184, 219);height: 50px;font-family: 'Almarai', sans-serif;">اضافة حصه دراسيه</button>
+              </div>
+        
+        
+            </form>
+          </div>
+    </div>
+</div>

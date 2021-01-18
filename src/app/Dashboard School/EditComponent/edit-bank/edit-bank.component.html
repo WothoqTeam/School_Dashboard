@@ -1,0 +1,53 @@
+
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="lastName" class="col-form-label col-sm-2 text-right">ID</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="id" class="form-control" style="width: 15.5rem;"/>
+                <div *ngIf="editFormData.id.invalid &amp;&amp; (editFormData.id.dirty || editFormData.id.touched)"
+                    class="alert-danger">
+                    <span>ID is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">اسم الفرع</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="name" class="form-control" style="width: 15.5rem;" />
+                <div *ngIf="editFormData.name.invalid &amp;&amp; (editFormData.name.dirty || editFormData.name.touched)"
+                    class="alert-danger">
+                    <span>name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">IBAN </label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="iban" class="form-control" style="width: 15.5rem;" />
+                <div *ngIf="editFormData.iban.invalid &amp;&amp; (editFormData.iban.dirty || editFormData.iban.touched)"
+                    class="alert-danger">
+                    <span>IBAN is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">IBAN </label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="iban" class="form-control" style="width: 15.5rem;" />
+                <div *ngIf="editFormData.iban.invalid &amp;&amp; (editFormData.iban.dirty || editFormData.iban.touched)"
+                    class="alert-danger">
+                    <span>IBAN is required!</span>
+                </div>
+            </div>
+        </div>
+      
+      
+     
+        <div class="modal-footer" >
+            <button [disabled]="isLoading" class="btn  mr-2" (click)="modal.close('Cancel')" style="background-color:  rgb(70, 184, 219);color: white;width:100px" >رجوع</button>
+            <button  [disabled]="isLoading" class="btn  mr-2" style="background-color:  rgb(70, 184, 219);color: white;width:100px"  >حفظ</button>
+        </div>
+ 
+    </form>
+</div>

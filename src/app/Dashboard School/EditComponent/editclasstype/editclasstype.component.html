@@ -1,0 +1,76 @@
+<div class="modal-body" style="height :80%;">
+  <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+    <div class="form-group row d-flex justify-content-center align-items-center">
+      <label for="lastName" class="col-form-label col-sm-2 text-right" style="margin-right: -4rem;">ID</label>
+      <div class="col-sm-5">
+        <input type="text" formControlName="class_type_id" class="form-control"
+          style="width: 15.5rem;margin-right: 2rem;" />
+        <div
+          *ngIf="editFormData.class_type_id.invalid &amp;&amp; (editFormData.class_type_id.dirty ||editFormData.class_id.touched)"
+          class="alert-danger">
+          <span>ID is required!</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row d-flex justify-content-center align-items-center">
+      <label for="firstName" class="col-form-label col-sm-2 text-right" style="margin-right: -4rem;">الفصل</label>
+      <div class="col-sm-5">
+        <input type="text" formControlName="name" class="form-control" style="width: 15.5rem;margin-right: 2rem;" />
+        <div *ngIf="editFormData.name.invalid &amp;&amp; (editFormData.name.dirty ||editFormData.name.touched)"
+          class="alert-danger">
+          <span>name is required!</span>
+        </div>
+      </div>
+    </div>
+    <div style="float: right;margin-right: 5rem;">
+
+      <form class="form-inline example">
+        <label>الجنس</label>
+        <div class="form-group" [formGroup]="editForm">
+
+          <select class="form-control" style="width: 15.5rem;height:40px; margin-right: 5.2rem;" formControlName="type"
+            (change)="onChange($event)">
+
+            <option value="" disabled selected> اختر الجنس</option>
+
+            <option value="بنات" style=""> بنات</option>
+
+            <option value="بنين" style="">بنين</option>
+
+            <i class="fas fa-angle-down text-info"></i>
+          </select>
+        </div>
+
+      </form>
+    </div>
+
+    <div style="float: right;margin-right: 5rem;margin-top: 1rem;">
+
+      <form class="form-inline example">
+        <label>المرحله الدراسيه</label>
+        <div class="form-group" [formGroup]="editForm">
+
+          <select class="form-control" style="width: 15.5rem;height:40px; margin-right: 2rem;"
+            formControlName="class_id">
+            <option value="" disabled selected>اختر المرحله</option>
+            <option *ngFor="let item of filterdArray" [value]="item.id">
+              {{item.name}}
+            </option>
+            <i class="fas fa-angle-down text-info"></i>
+          </select>
+
+        </div>
+
+      </form>
+    </div>
+    <div class="modal-footer" style="margin-top: 10rem;">
+      <button [disabled]="isLoading" class="btn  mr-2" (click)="modal.close('Cancel')" style="background-color:  rgb(70, 184, 219);color: white;width:120px;margin-left: 15rem;
+      font-family: 'Cairo', sans-serif;font-size: 18px;">رجوع</button>
+
+      <button [disabled]="isLoading" class="btn mr-2 " style="background-color:  rgb(70, 184, 219);color: white;width:120px;height: 40px;
+      margin-left: 5rem;font-size: 18px;font-family: 'Cairo', sans-serif;margin-top: -3rem;"> حفظ</button>
+    </div>
+
+  </form>
+
+</div>

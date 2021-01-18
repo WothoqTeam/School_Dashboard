@@ -1,0 +1,58 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+  <div class="infoContent">
+    <div id="addCosts" class="w3-container city w3-animate-opacity">
+      <div style="margin-top:1rem ;margin-right: 2rem;">
+        <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+            class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:black;font-family:Arial, Helvetica, sans-serif ;"> المواد
+          الدراسية<i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+        <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة ماده
+          دراسية</span>
+      </div>
+      <hr style="width:95%;margin-top: 2rem;">
+      <form [formGroup]="subForm" (ngSubmit)="submitFormCost()">
+
+        <div class="row" style="font-size: 22px;margin-bottom: 2rem;">
+          <div style="float: right;margin-right: 3rem;">
+            <label> الماده الدراسيه</label>
+            <form class="example form-group" [formGroup]="subForm" style="width: 350px;margin-right: -30px;">
+              <input type="text" formControlName="name" style="height:50px;" class="form-control"
+                placeholder="ادخل السنه الدراسيه" name="name">
+              <button type="submit" style="width: 50px;"><i class="fas fa-calendar-alt"
+                  style="font-size: 25px;"></i></button>
+            </form>
+          </div>
+          <div>
+            <label style="margin-right: 2rem;">نوع الفصل الدراسي</label>
+
+          <div style="border: 1px solid rgb(182, 182, 182);width:100%;height: 50px;
+            font-size: 20px; border-radius: 10px;margin-right: 1rem;">
+            <!-- Default inline 1-->
+            <div class="form-check form-check-inline mt-2" [formGroup]="subForm"  >
+              <input type="radio" class="form-check-input" formControlName="semester" checked name="semester"
+                value="الاول">
+              <label class="form-check-label mr-2" for="materialInline1">الترم الاول </label>
+            </div>
+            <!-- Material inline 2 -->
+            <div class="form-check form-check-inline " style="margin-right: 5rem;" [formGroup]="subForm">
+              <input type="radio" class="form-check-input" formControlName="semester" name="semester"
+                value="التانى">
+              <label class="form-check-label mr-2" for="materialInline2">الترم التانى </label>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        <div class="row" style="float: left;margin-top: -6.3rem;margin-left: 5rem;">
+          <div >
+            <button type="submit" class="btn " style="color: white;background-color:  rgb(70, 184, 219);
+            width:300px;
+            height:50px;font-size: 25px;">اضافة الماده الدراسية</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

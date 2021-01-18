@@ -1,0 +1,1235 @@
+<div class="w3-sidebar w3-bar-block " style="width:270px">
+  <div style="height:auto;;margin-top: -2rem;border-bottom:10px solid rgb(12, 102, 124)">
+    <img src="./assets/images/image.png" class="center" style="margin-bottom: -55px;" height="180px">
+  </div><a [routerLink]="['/school/home']" > الصفحة الرئيسيه</a>
+  <button class="w3-bar-item w3-button tablink  w3-teal" style="top: 10%;" onclick="openLink(event, 'Fade')"><i
+      class="fas fa-home ml-4  "></i>الصفحه الرئيسيه</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade1')"> <i
+      class="fas fa-school ml-4 mt-3"></i>الفروع</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade2')"> <i
+      class="fas fa-university ml-4 mt-3"></i>قائمة البنوك</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade3')"><i
+      class="fas fa-money-bill-wave ml-4 mt-3"></i>الرسوم الدراسية</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade4')"> <i
+      class="fas fa-clipboard-list ml-4 mt-3"></i>نظام التسجيل</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade5')"> <i
+      class="fas fa-id-badge ml-4 mt-3"></i>الامتحانات</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade6')"> <i
+      class="fas fa-people-arrows ml-4 mt-3"></i>المقابلة الشخصية</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade7')"> <i
+      class="fas fa-user-circle ml-4 mt-3"></i>المستخدمين</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade8')"> <i
+      class="fas fa-chalkboard-teacher ml-4 mt-3"></i>المدرسين</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade9')"> <i
+      class="fas fa-users ml-4 mt-3"></i>الفصول الدراسيه</button>
+  <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Faade')"> <i
+        class="fas fa-book-open ml-4 mt-3"></i>الجداول الدراسيه</button>
+
+
+</div>
+
+<div style="text-align: right;margin-right: 270px;">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white"
+    style="border-bottom:5px solid rgb(230, 230, 230);height: 100px;">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="#"><i class="fas fa-globe ml-2"
+              style="font-size:25px ;color:rgb(62, 188, 238)"></i></a>
+        </li>
+        <li class="nav-item" style="border-left:2px solid gray">
+          <a class="nav-link" href="#"><i class="fas fa-bell " style="font-size:25px ;color:rgb(62, 188, 238)"></i></a>
+        </li>
+        <li class="dropdown mr-3 mt-2">
+          <a href="#" data-toggle="dropdown" style="font-size: 20px;color:black">مرحبا بك <span
+              class="	far fa-arrow-alt-circle-down pull-left" style="font-size: 25px;"></span></a>
+          <ul class="dropdown-menu" style="width: 220px;text-align: right;">
+            <li><button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Fade11')"
+                style="color: black;">تعديل الصفحه الشخصيه </button></li>
+            <hr style="background-color: rgb(160, 160, 160);width:90%;margin-right: auto;margin-left: auto;">
+            <li><a class="btn" (click)="OnLogout()">تسجيل الخروج</a></li>
+          </ul>
+
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <div id="Fade" class="w3-container city w3-animate-opacity ">
+    <span style="width: 100%;">
+      <img src="./assets/images/schoollogo.png" height="150px" width="150px"
+        style="margin-top: 4rem;margin-right: 4rem;">
+      <p style="display: inline-block;font-size: 25px;margin-right: 2rem;">اسم المدرسه</p>
+
+      <span>
+        <p style="width:900px;margin-right: 15rem;margin-top: -5rem;">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى
+          المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع
+          الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ طبيعياَ -إلى حد ما-
+          للأحرف عوضاً عن استخدام "هنا
+          يوجد محتوى نصي، هنا يوجد محتوى نصي" فتجعلها تبدو (أي الأحرف) وكأنها نص مقروء</p>
+      </span>
+    </span>
+    <div>
+      <span>
+        <i class="fas fa-map-marker-alt" style="color: gainsboro;margin-right: 15rem;margin-top: 3rem;font-size: 30px;">
+          <p
+            style="display: inline-block;margin-right:2rem ;color: gray;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            العنوان ،الحى،المدينه، البلد </p>
+        </i>
+      </span>
+      <div>
+        <i class="fas fa-mobile-alt" style="color: gainsboro;margin-right: 15rem;margin-top: 1rem;font-size: 30px;">
+          <p
+            style="display: inline-block;margin-right:2rem ;color: gray;font-size: 20px;font-family: Arial, Helvetica, sans-serif;">
+            رقم الهاتف الخاص بالمدرسه - رقم هاتف اخر خاص بالمدرسه </p>
+        </i>
+      </div>
+    </div>
+    <hr style="height: 200px;width:90%;">
+    <div style="margin-top: -12rem;">
+      <div class="toggle-container text-left">
+        <div class="btn-group btn-toggle">
+          <button class="btn btn-md btn-dark active" style="font-size: 25px;">بنين</button>
+          <button class="btn btn-md btn-default" style="font-size: 25px;">بنات</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p
+        style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;margin-top: -3rem ;margin-right: 2rem;color: gray;">
+        الاقسام الدراسية</p>
+      <ul>
+        <li style="font-size:25px;color: mediumturquoise;">رياض الاطفال ( 4 مراحل )</li>
+        <div class="vLine">
+
+        </div>
+        <span>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الاولي</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الثانيه</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الثالثه</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">المرحلة الرابعه</a>
+        </span>
+        <br>
+        <li style="font-size:25px;color: mediumturquoise;margin-top: 2rem;">الإبتدائية ( 5 مراحل )</li>
+        <div class="vLine">
+
+        </div>
+        <span>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">اولى ابتدائي</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثانى ابتدائي</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثالث ابتدائي</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">رابع ابتدائي</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">خامس ابتدائي</a>
+        </span>
+        <li style="font-size:25px;color: mediumturquoise;margin-top: 2rem;">المتوسطة ( 3 مراحل )</li>
+        <span>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">اولى متوسط</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثانى متوسط</a>
+          <a class="btn rounded-pill mt-4 mr-5" style="border:2px solid gray">ثالث متوسط</a>
+
+        </span>
+      </ul>
+
+
+    </div>
+  </div>
+
+  <div id="Fade1" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:1rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الفروع</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2"   >
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;" >
+          <input class="formGroup" type="text" placeholder="البحث" name="name" (keydown)="filterBranch($event)"  >
+          <button type="submit"><i class="fa fa-search" ></i></button>
+
+        </form>
+      </span>
+      <span>
+        <button type="button" class="w3-button tablink  " onclick="openLink(event, 'addbranch')"
+          style="background-color:rgb(70, 184, 219);border-radius:10px;color: white;margin-top: -5rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 20px;">اضافة
+          فرع</button>
+      </span>
+      <!--Table-->
+      <table class="table table-striped" style="width: 87%;text-align: center;">
+
+        <!--Table head-->
+        <thead>
+          <tr style="font-size: 18px;">
+            <th>#</th>
+            <th>اسم الفرع <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>المدينه <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الحى <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info" *ngFor="let item of branchList ">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.city}}</td>
+            <td>{{item.district}}</td>
+            <td><button type="button" class="btn  ml-1" (click)="openModal(item)
+              " style="color: white;background-color:rgb(70, 184, 219);">
+                <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="Delete(item)"><i
+                  class="far fa-trash-alt"></i></button></td>
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+
+  </div>
+
+  <div id="addbranch" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;"> الصفحة الرئيسيه <i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الفروع <i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i> </span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة فرع </span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <form [formGroup]="issueForm" (ngSubmit)="submitForm()">
+
+      <div style="float: right;">
+        <label style="margin-right: 3rem;">اسم الفرع</label>
+        <form class="example form-group" [formGroup]="issueForm" style="width: 550px;margin-right: -20px;">
+          <input type="text" style="height:50px;" formControlName="name" class="form-control"
+            placeholder="ادخل اسم الفرع" name="search2">
+          <button type="submit" style="width: 50px;"><i class="fas fa-school" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label>الحى </label>
+        <form class="example form-group" [formGroup]="issueForm" style="width: 350px;">
+          <input type="text" style="height:50px" formControlName="district" class="form-control"
+            placeholder="ادخل اسم الحى " name="search2">
+          <button type="submit"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label>المدينه </label>
+        <form class="example form-group" [formGroup]="issueForm" style="width: 350px;">
+          <input type="text" style="height:50px" formControlName="city" class="form-control"
+            placeholder="ادخل اسم المدينه" name="search2">
+          <button type="submit"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div>
+        <button type="submit" class="btn "
+          style="color: white;float: left;margin-left: 10rem;font-size: 20px;width:300px;background-color:rgb(70, 184, 219);">حفظ</button>
+      </div>
+
+
+    </form>
+  </div>
+  <div id="Fade2" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:1rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> قائمة
+        البنوك</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2" (keydown)="filterBank($event)" >
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+      <span>
+        <button type="button" class="w3-button tablink  " onclick="openLink(event,'addNew')" style="background-color:rgb(70, 184, 219);border-radius:10px;color: white
+        ;margin-top: -5rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 20px;">اضافة بنك</button>
+      </span>
+
+      <table class="table table-striped text-center" style="width: 80%;">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>أسم البنك <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>IBAN <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info" *ngFor="let item of bankList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.iban}}</td>
+            <td><button type="button" class="btn  ml-1" style="color: white;background-color:rgb(70, 184, 219);"
+                data-toggle="modal" data-target="#myModal">
+                <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="Delete(item)"><i
+                  class="far fa-trash-alt"></i></button></td>
+
+
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+
+  <div id="addNew" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;">قائمة البنوك<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة بنك</span>
+    </div>
+    <hr style="height: 10px;width:90%;margin-top: 2rem;">
+
+    <form [formGroup]="bankForm" (ngSubmit)="submitFormBank()">
+
+      <div style="float: right;">
+        <label style="margin-right: 3rem;">اسم البنك</label>
+        <form class="example form-group" [formGroup]="bankForm" style="width: 550px;">
+          <input type="text" style="height:50px;" formControlName="name" class="form-control"
+            placeholder="ادخل اسم البنك" name="search2">
+          <button type="submit" style="width: 70px;"><i class="fas fa-university" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label style="margin-right: 3rem;">IBAN </label>
+        <form class="example form-group" [formGroup]="bankForm" style="width: 550px;">
+          <input type="text" style="height:50px" formControlName="iban" class="form-control" placeholder="ادخل IBAN "
+            name="search2">
+          <button type="submit" style="width: 70px;"><i class="fas fa-university" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+
+      <div>
+        <button type="submit" class="btn "
+          style="color: white;float: left;margin-left: 10rem;font-size: 20px;width:300px;background-color:rgb(70, 184, 219);">حفظ</button>
+      </div>
+
+
+    </form>
+  </div>
+
+  <div id="Fade3" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الرسوم
+        الدراسيه</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2" (keydown)="filterBank($event)" >
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+      <span>
+        <button type="button" class="w3-button tablink  " onclick="openLink(event,'addCosts')" style="background-color: teal;border-radius:10px;color: white;
+        margin-top: -5rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 20px;">اضافة الرسوم</button>
+      </span>
+      <!--Table-->
+      <table class="table table-striped text-center" style="width: 80%;">
+
+        <!--Table head-->
+        <thead>
+          <tr class="text-center">
+            <th>#</th>
+            <th>السنه الدراسية  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الجنس <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الفصل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>نوع السنه الدراسيه  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الانتقال <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الرحله <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الرسوم الدراسيه <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info text-center" *ngFor="let item of CostList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.year}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.class_id}}</td>
+            <td>{{item.study_type}}</td>
+            <td>{{item.transportation}}</td>
+            <td>{{item.trip}}</td>
+            <td>{{item.cost}}</td>
+
+            <td><button type="button" class="btn  ml-1" style="color: white;background-color:rgb(70, 184, 219);"
+              data-toggle="modal" data-target="#myModal">
+              <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="DeleteCost(item)"><i
+                class="far fa-trash-alt"></i></button></td>
+            <!-- <td><i class="fas fa-pen"></i></td>
+            <td><button (click)="DeleteCost(item)"><i class="far fa-trash-alt"></i></button></td> -->
+
+
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+  <div id="addCosts" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الفروع<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة فرع</span>
+    </div>
+    <hr style="height: 10px;width:90%;margin-top: 2rem;">
+    <form [formGroup]="costForm" (ngSubmit)="submitFormCost()">
+      <div class="form-group">
+        <label>Issue</label>
+        <input type="text" formControlName="year" class="form-control" maxlength="20">
+      </div>
+      <div class="form-group">
+        <label>Issue Details</label>
+        <textarea class="form-control" formControlName="type" rows="3" maxlength="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Issue Details</label>
+        <textarea class="form-control" formControlName="class_id" rows="3" maxlength="50"></textarea>
+      </div>
+      <div style="border: 1px solid gray;width:20%;height: 50px;display:inline-block">
+        <!-- Default inline 1-->
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" checked id="materialInline1" name="studyyear">
+          <label class="form-check-label mr-2" for="materialInline1">نصف ترم</label>
+        </div>
+
+        <!-- Material inline 2 -->
+        <div class="form-check form-check-inline mr-5">
+          <input type="radio" class="form-check-input" id="materialInline2" name="studyyear">
+          <label class="form-check-label mr-2" for="materialInline2">ترم كامل</label>
+        </div>
+      </div>
+      <div style="border: 1px solid gray;width:20%;height: 50px;display:inline-block">
+        <!-- Default inline 1-->
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" checked id="materialInline1" name="bus">
+          <label class="form-check-label mr-2" for="materialInline1">باص</label>
+        </div>
+
+        <!-- Material inline 2 -->
+        <div class="form-check form-check-inline mr-5">
+          <input type="radio" class="form-check-input" id="materialInline2" name="bus">
+          <label class="form-check-label mr-2" for="materialInline2">بدون باص</label>
+        </div>
+      </div>
+      <div style="border: 1px solid gray;width:20%;height: 50px;display:inline-block">
+        <!-- Default inline 1-->
+        <div class="form-check form-check-inline">
+          <input type="radio" class="form-check-input" checked id="materialInline1" name="trip">
+          <label class="form-check-label mr-2" for="materialInline1">ذهاب وعوده</label>
+        </div>
+
+        <!-- Material inline 2 -->
+        <div class="form-check form-check-inline mr-5">
+          <input type="radio" class="form-check-input" id="materialInline2" name="trip">
+          <label class="form-check-label mr-2" for="materialInline2">ذهاب او عوده</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Issue Details</label>
+        <textarea class="form-control" formControlName="transportation" rows="3" maxlength="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Issue Details</label>
+        <textarea class="form-control" formControlName="trip" rows="3" maxlength="50"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Issue Details</label>
+        <textarea class="form-control" formControlName="cost" rows="3" maxlength="50"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+  </div>
+
+  <div id="Fade4" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> نظام
+        التسجيل</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2" (keydown)="filterBank($event)" >
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+      <span>
+        <button type="button" class="btn btn-info "
+          style="margin-top: -5rem;margin-right: 58rem;width: 12%;height: 50px;font-size: 18px;">اجراء مقابلة
+          شخصيه</button>
+        <button type="button" class="btn btn-info "
+          style="margin-top: -8rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 18px;">اجراء امتحان</button>
+
+        <button type="button" class="btn btn-info "
+          style="margin-top: -3rem;margin-right: 58rem;width: 12%;height: 50px;font-size: 18px;">اضافة طلب
+          تسجيل</button>
+        <button type="button" class="btn  "
+          style="margin-top: -6rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 18px;background-color: rgb(107, 196, 107);color: white;">تصدير
+          الى الاكسيل</button>
+      </span>
+      <table class="table text-center" style="width: 90%;">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">أسم الطالب <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th scope="col">رقم هويه الطالب <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th scope="col">حالة الطلب <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th scope="col">تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr *ngFor="let item of appList" [ngClass]="{'complete': item.status === 'مكتمل' ,
+                                                          'editable': item.status === 'تحت المعالجة',
+                                                          'meeting': item.status === 'المقابلة الشخصية',
+                                                          'payment': item.status === 'السداد' ,
+                                                          'accept' : item.status === 'اختبار القبول'}">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.student_name}}</td>
+            <td>{{item.student_national_id}}</td>
+            <td>{{item.status}}</td>
+            <td><button type="button" class="btn  ml-1" style="color: white;background-color:rgb(70, 184, 219);"
+                data-toggle="modal" data-target="#myModal">
+                <i class="fas fa-pen"></i></button> | <button style="background-color: lightblue;"
+                class="btn ml-2 text-white mr-2" (click)="Delete(item)"><i class="fas fa-file"></i></button> | <button
+                class="btn btn-danger mr-2" (click)="Delete(item)"><i class="far fa-trash-alt"></i></button></td>
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+    </div>
+
+  </div>
+
+  <div id="Fade5" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الامتحانات</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+
+      <span>
+        <button type="button" class="btn btn-info "
+          style="margin-top: -5rem;margin-right: 58rem;width: 12%;height: 50px;font-size: 18px;">نتيجة
+          الامتحانات</button>
+        <button type="button" class="btn btn-info "
+          style="margin-top: -8rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 18px;">اضافة امتحان </button>
+      </span>
+      <!--Table-->
+      <table class="table table-striped text-center" style="width: 87%;">
+
+        <!--Table head-->
+        <thead>
+          <tr class="text-center">
+            <th>#</th>
+            <th>الفصل الدراسي <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>اسم الامتحان <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>عدد الاسئله <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info text-center" *ngFor="let item of examList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.class_id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.question_count}}</td>
+            <td><button type="button" class="btn  ml-1" (click)="openModal(item)
+              " style="color: white;background-color:rgb(70, 184, 219);">
+                <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="Delete(item)"><i
+                  class="far fa-trash-alt"></i></button></td>
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+  <div id="Fade6" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:1rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> المقابلة
+        الشخصيه</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;margin-bottom: 2rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+
+      <!--Table-->
+      <table class="table table-striped text-center " style="width: 87%;">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>رقم الطلب <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>التاريخ <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الوقت <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>رابط المقابله <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info" *ngFor="let item of interviewList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.application.id}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.time}}</td>
+            <td><a href="{{item.link}}">ادخل على رابط المقابلة</a></td>
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+  <div id="Fade7" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> المستخدمين</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;margin-bottom: 2rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+
+    <table class="table  text-center" style="width: 90%;">
+      <thead>
+        <tr>
+          <th>#  </th>
+          <th>أسم المستخدم  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          <th>اسم الوالد <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          <th>النوع <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          <th>نوع السنه الدراسيه  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          <th>الاكاديميه <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          <th>معاينه  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let item of userList">
+        <tr  *ngFor="let info of item.application;let i=index">
+          <th scope="row">{{i}}</th>
+          <td>{{item.name}}</td>
+          <td>{{info.father_full_name}}</td>
+          <td>{{info.gender}}</td>
+          <td>{{info.study_type}}</td>
+          <td>{{info.study_year}}</td>
+          <td><button type="button" class="btn  ml-1"
+            style="color: white;background-color:rgb(70, 184, 219);"  data-toggle="modal" data-target="#exampleModal">
+              <i  class="fas fa-eye" style="font-size: 18px;"></i></button> </td>
+
+        </tr>
+
+      </tbody>
+    </table>
+      <!--Table-->
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" style="float: left;">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card-body">
+                <!-- <h5 class="card-title">{{name}}</h5> -->
+                <!-- <div class="card-text">
+                  <div> ID: {{User.ID}} </div>
+                    <div> Price : {{User.Price}} </div>
+                    <div> Quantity : {{User.Quantity}} </div>
+                </div> -->
+                <br>
+                <!-- <button class="btn btn-primary" (click)="goBack()">Go back</button>
+                <br>
+                <br>
+                <a class="btn btn-primary text-white" (click)="changeProduct()">Change product</a> -->
+              </div>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="Fade8" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> المدرسين</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;" >
+          <input class="formGroup" type="text" placeholder="البحث" name="name">
+          <button type="submit"><i class="fa fa-search" ></i></button>
+
+        </form>
+      </span>
+      <span>
+        <button type="button" class="w3-button tablink  " onclick="openLink(event,'addTeacer')" style="background-color: teal;border-radius:10px;color: white;
+        margin-top: -5rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 20px;">اضافة مدرس</button>
+      </span>
+      <table class="table  text-center" style="width: 90%;">
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>أسم المدرس  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>رقم الهاتف  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>البريد الالكترونى  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>تعديل  <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+        <!--Table body-->
+        <tbody>
+          <tr  *ngFor="let item of teacherList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.mobile}}</td>
+            <td>{{item.email}}</td>
+            <td><button type="button" class="btn  ml-1" (click)="openModal(item)
+              " style="color: white;background-color:rgb(70, 184, 219);">
+                <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="Delete(item)"><i
+                  class="far fa-trash-alt"></i></button></td>
+
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+  <div id="addTeacer" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> المدرسين<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة مدرس</span>
+    </div>
+    <hr style="height: 10px;width:90%;margin-top: 2rem;">
+    <form [formGroup]="teacherForm" (ngSubmit)="submitFormTeacher()">
+
+ <div style="float: right;">
+  <label style="margin-right: 3rem;">الاسم بالكامل</label>
+  <form class="example form-group" [formGroup]="teacherForm" style="width: 600px;margin-right: -20px;">
+    <input type="text" style="height:50px;" formControlName="name" class="form-control"
+      placeholder="ادخل الاسم بالكامل" name="search2">
+    <button  style="width: 50px;"><i class="fas fa-user-graduate" style="font-size: 25px;"></i></button>
+  </form>
+</div>
+<div style="float: right;">
+  <label style="margin-right: 3rem;">البريد الالكترونى</label>
+  <form class="example form-group" [formGroup]="teacherForm" style="width: 600px;margin-right: -20px;">
+    <input type="text" style="height:50px;" formControlName="email" class="form-control"
+      placeholder="ادخل البريدالالكترونى" name="search2">
+    <button style="width: 50px;"><i class="fas fa-envelope" style="font-size: 25px;"></i></button>
+  </form>
+</div>
+<div style="float: right;">
+  <label style="margin-right: 3rem;">رقم الهاتف</label>
+  <form class="example form-group" [formGroup]="teacherForm" style="width: 600px;margin-right: -20px;">
+    <input type="text" style="height:50px;" formControlName="mobile" class="form-control"
+      placeholder="ادخل رقم الهاتف" name="search2">
+    <button style="width: 50px;"><i class="fas fa-mobile-alt" style="font-size: 25px;"></i></button>
+  </form>
+</div>
+
+
+<div>
+  <button type="submit" class="btn  "
+    style="margin-top: 2rem;height: 50px;color: white;float: left;margin-left: 15rem;font-size: 20px;width:500px;background-color:rgb(70, 184, 219);">اضافة مدرس</button>
+</div>
+
+    </form>
+  </div>
+
+  <div id="Fade9" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الفصول
+        الدراسيه</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2" (keydown)="filterBank($event)" >
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+      <span>
+        <button type="button" class="w3-button tablink  " onclick="openLink(event, 'addClass')"
+        style="background-color:rgb(70, 184, 219);border-radius:10px;color: white;margin-top: -5rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 20px;">اضافة فصل</button>
+      </span>
+
+      
+      <table class="table table-striped text-center" style="width: 90%;">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>أسم المدرس <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>الماده الدراسيه <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>  الفصل الدراسي<i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>  التاريخ و الوقت<i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>رابط الفصل<i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info" *ngFor="let item of classList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.teacher.name}}</td>
+            <td>{{item.subject.name}}</td>
+            <td>{{item.subject.semester}}</td>
+            <td>{{item.start_time}}</td>
+            <td><a href="https://web.whatsapp.com/send?{{item.join_url}}" data-action="share/whatsapp/share">
+              <i class="fab fa-whatsapp" style="color: black;font-size: 25px;"></i></a></td>
+            <td><button type="button" class="btn  ml-1" style="color: white;background-color:rgb(70, 184, 219);"
+                data-toggle="modal" data-target="#myModal">
+                <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="DeleteClas(item)"><i
+                  class="far fa-trash-alt"></i></button></td>
+
+
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+  <div id="addClass" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;"> الصفحة الرئيسيه <i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> الفصول الدراسيه
+          <i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i> </span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة فصل دراسي </span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <form [formGroup]="ClassForm" (ngSubmit)="submitFormClass()">
+
+      <div style="float: right;">
+        <label style="margin-right: 4rem;">المدرس</label>
+        <form class="example form-group" [formGroup]="ClassForm" style="width: 600px;margin-right: -20px;">
+          <input type="text" style="height:50px;" formControlName="teacher" class="form-control"
+            placeholder="ادخل المدرس" name="search2">
+          <button type="submit" style="width: 50px;"><i class="fas fa-user-graduate" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label  style="margin-right: 5rem;">المادة الدراسية </label>
+        <form class="example form-group" [formGroup]="ClassForm" style="width: 600px;">
+          <input type="text" style="height:50px" formControlName="subject" class="form-control"
+            placeholder="أدخل المادة الدارسية " name="search2">
+          <button type="submit" style="width: 50px;"><i class="fas fa-school" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label  style="margin-right: 3rem;">الفصل الدراسي </label>
+        <form class="example form-group" [formGroup]="ClassForm" style="width: 600px;;margin-right: -30px;">
+          <input type="text" style="height:50px" formControlName="semester" class="form-control"
+            placeholder="ادخل الفصل الدارسي" name="search2">
+          <button type="submit"  style="width: 50px;"><i class="fas fa-user-graduate" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label  style="margin-right: 5rem;">وقت بداية الفصل الدراسي </label>
+        <form class="example form-group" [formGroup]="ClassForm" style="width: 600px;">
+          <input type="text" style="height:50px" formControlName="start_time" class="form-control"
+            placeholder="حدد وقت بداية الفصل الدراسي" name="search2">
+          <button type="submit"  style="width: 50px;"><i class="fas fa-calendar-alt" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div style="float: right;margin-right: 1rem;">
+        <label  style="margin-right: 3rem;">وقت نهاية الفصل الدراسي </label>
+        <form class="example form-group" [formGroup]="ClassForm" style="width: 600px;;margin-right: -30px;">
+          <input type="text" style="height:50px" formControlName="end_time" class="form-control"
+            placeholder="حدد وقت نهاية الفصل الدراسي" name="search2">
+          <button type="submit"  style="width: 50px;"><i class="fas fa-calendar-alt" style="font-size: 25px;"></i></button>
+        </form>
+      </div>
+      <div>
+        <button type="submit" class="btn "
+          style="color: white;float: left;margin-left: 13rem;font-size: 20px;margin-top: 2rem
+          ;width:550px;background-color:rgb(70, 184, 219);height: 50px;">اضافة فصل دراسي</button>
+      </div>
+
+
+    </form>
+  </div>
+
+  <div id="Faade" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> 
+        الجداول الدراسية</span>
+    </div>
+    <hr style="width:90%;margin-top: 2rem;">
+    <div>
+
+      <span style="float: right;">
+
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="اختر" name="search2">
+          <button><i class="fas fa-pen"></i></button>
+        </form>
+      </span>
+      <span style="float: right;margin-right: 10rem;">
+        <form class="example" style="max-width:300px;">
+          <input type="text" placeholder="البحث" name="search2" (keydown)="filterBank($event)" >
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </span>
+      <span>
+        <button type="button" class="w3-button tablink  " onclick="openLink(event, 'addClass')"
+        style="background-color:rgb(70, 184, 219);border-radius:10px;color: white;
+        margin-top: -5rem;margin-right: 70rem;width: 12%;height: 50px;font-size: 20px;">اضافة جدول دراسي</button>
+      </span>
+
+      
+      <table class="table table-striped text-center" style="width: 90%;">
+
+        <!--Table head-->
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>أسم الجدول <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>السنة الدراسية<i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th>  الفصل الدراسي<i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+            <th> المرحلة الدراسية<i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+         
+            <th>تعديل <i class="fas fa-sort mr-2" style="font-size: 18px;"></i></th>
+          </tr>
+        </thead>
+        <!--Table head-->
+
+        <!--Table body-->
+        <tbody>
+          <tr class="table-info" *ngFor="let item of schedList">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.study_year}}</td>
+            <td>{{item.semester}}</td>
+            <td>{{item.class.name}}</td>
+            
+            <td><button type="button" class="btn  ml-1" style="color: white;background-color:rgb(70, 184, 219);"
+                data-toggle="modal" data-target="#myModal">
+                <i class="fas fa-pen"></i></button> | <button class="btn btn-danger mr-2" (click)="DeleteClas(item)"><i
+                  class="far fa-trash-alt"></i></button></td>
+
+
+          </tr>
+
+        </tbody>
+        <!--Table body-->
+
+
+      </table>
+      <!--Table-->
+    </div>
+  </div>
+  <!-- <div id="Fade11" class="w3-container city w3-animate-opacity" style="display:none">
+    <div style="margin-top:3rem ;margin-right: 2rem;">
+      <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+          class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+      <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> تعديل الصفحة
+        الشخصيه</span>
+    </div>
+    <hr style="height: 20px;width:90%;margin-top: 2rem;">
+    <form>
+      <div class="picture-container">
+        <div class="picture">
+          <img
+            src="https://lh3.googleusercontent.com/LfmMVU71g-HKXTCP_QWlDOemmWg4Dn1rJjxeEsZKMNaQprgunDTtEuzmcwUBgupKQVTuP0vczT9bH32ywaF7h68mF-osUSBAeM6MxyhvJhG6HKZMTYjgEv3WkWCfLB7czfODidNQPdja99HMb4qhCY1uFS8X0OQOVGeuhdHy8ln7eyr-6MnkCcy64wl6S_S6ep9j7aJIIopZ9wxk7Iqm-gFjmBtg6KJVkBD0IA6BnS-XlIVpbqL5LYi62elCrbDgiaD6Oe8uluucbYeL1i9kgr4c1b_NBSNe6zFwj7vrju4Zdbax-GPHmiuirf2h86eKdRl7A5h8PXGrCDNIYMID-J7_KuHKqaM-I7W5yI00QDpG9x5q5xOQMgCy1bbu3St1paqt9KHrvNS_SCx-QJgBTOIWW6T0DHVlvV_9YF5UZpN7aV5a79xvN1Gdrc7spvSs82v6gta8AJHCgzNSWQw5QUR8EN_-cTPF6S-vifLa2KtRdRAV7q-CQvhMrbBCaEYY73bQcPZFd9XE7HIbHXwXYA=s200-no"
+            class="picture-src" id="wizardPicturePreview" title="">
+          <input type="file" id="wizard-picture" class="" [(ngModel)]="profile.logo" name="logo">
+        </div>
+      </div>
+
+      <div class="form-group " style="margin-right: 13rem;margin-top:-7rem;">
+
+        <label> اسم المدرسه</label>
+        <div class="inputWithIcon inputIconBg" style="width: 84%;">
+          <span>
+            <i class="fas fa-school "></i>
+          </span>
+          <input type="text" class=" text-right form-control " [(ngModel)]="profile.name" name="name"
+            placeholder="ادخل اسم المدرسه " required autofocus>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group " style="margin-right: 13rem;">
+
+            <label> رقم الهاتف</label>
+            <div class="inputWithIcon inputIconBg" style="width: 100%;">
+              <span>
+                <i class="fas fa-mobile-alt"></i>
+              </span>
+              <input type="password" [(ngModel)]="profile.mobile" name="mobile" class=" text-right form-control "
+                placeholder="ادخل رقم الهاتف " required autofocus>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group ">
+
+            <label>رقم الهاتف الاخر</label>
+            <div class="inputWithIcon inputIconBg" style="width: 71%;">
+              <span>
+                <i class="fas fa-mobile-alt"></i>
+              </span>
+              <input type="password" class=" text-right form-control " [(ngModel)]="profile.mobile" name="mobile"
+                placeholder="ادخل رقم الهاتف الاخر " required autofocus>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+
+          <label> نبذه مختصره</label><br><br>
+          <div class="form-group ">
+            <div class="inputWithIcon inputIconBg" style="width: 86%;">
+              <span>
+                <i class="fas fa-school "></i>
+              </span>
+              <input type="text" class=" text-right form-control " [(ngModel)]="profile.about" name="about"
+                placeholder="ادخل اسم المدرسه " required autofocus>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group ">
+
+            <label>عنوان المدرسة</label>
+            <div class="inputWithIcon inputIconBg" style="width: 100%;">
+              <span>
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <input type="text" [(ngModel)]="profile.address" name="address" class=" text-right form-control "
+                placeholder="ادخل رقم الهاتف " required autofocus>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group ">
+
+            <label>الحى</label>
+            <div class="inputWithIcon inputIconBg" style="width: 100%;">
+              <span>
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <input type="text" class=" text-right form-control " [(ngModel)]="profile.district" name="district"
+                placeholder="ادخل رقم الهاتف الاخر " required autofocus>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ">
+          <div class="form-group ">
+            <label> المدينه</label>
+            <div class="inputWithIcon inputIconBg" style="width: 83%;">
+              <span>
+                <i class="fas fa-map-marker-alt"></i>
+              </span>
+              <input type="text" [(ngModel)]="profile.city" name="city" class=" text-right form-control "
+                placeholder="ادخل رقم الهاتف " required autofocus>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-2 ">
+          <button class="btn btn-success" (click)="UpdateProfile()">Update</button>
+
+        </div>
+      </div>
+    </form>
+  </div> -->
+</div>
+
+<!-- <ul *ngFor="let group of peopleByCountry"> (1)
+  <li>{{ group.country }}</li>
+  <ul>
+   <li *ngFor="let person of group.people"> (2)
+     {{ person.name }}
+   </li>
+  </ul>
+</ul> -->

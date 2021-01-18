@@ -1,0 +1,58 @@
+<app-header></app-header>
+<app-side></app-side>
+<div class="appSideInfo">
+    <div class="infoContent">
+        <div id="addTeacer" class="w3-container city w3-animate-opacity" >
+            <div style="margin-top:1rem ;margin-right: 2rem;">
+                <span style="font-size: 25px;font-family:Arial, Helvetica, sans-serif ;">الصفحة الرئيسيه<i
+                        class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;">
+                    المدرسين<i class="fas fa-angle-left mr-2" style="color: rgb(180, 178, 178);"></i></span>
+                <span style="font-size: 25px;color:mediumturquoise;font-family:Arial, Helvetica, sans-serif ;"> اضافة
+                    مدرس</span>
+            </div>
+            <hr style="width:95%;margin-top: 2rem;">
+            <form [formGroup]="teacherForm" (ngSubmit)="submitFormTeacher()">
+
+                <div style="float: right;">
+                    <label style="margin-right: 1rem;">الاسم بالكامل</label>
+                    <form class="example form-group" [formGroup]="teacherForm"
+                        style="width: 570px;margin-right: -4rem;">
+                        <input type="text" style="height:50px;" formControlName="name" class="form-control"
+                            placeholder="ادخل الاسم بالكامل" name="search2">
+                        <button style="width: 50px;"><i class="fas fa-user-graduate"
+                                style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+                <div style="float: right;">
+                    <label style="margin-right: 3rem;">البريد الالكترونى</label>
+                    <form class="example form-group" [formGroup]="teacherForm"
+                        style="width: 570px;margin-right: -3rem;">
+                        <input type="text" style="height:50px;" formControlName="email" class="form-control"
+                            placeholder="ادخل البريدالالكترونى" name="search2">
+                        <button style="width: 50px;"><i class="fas fa-envelope" style="font-size: 25px;"></i></button>
+                    </form>
+                </div>
+                <div style="float: right;">
+                    <label style="margin-right: 1rem;">رقم الهاتف</label>
+                    <form class="example form-group" [formGroup]="teacherForm"
+                        style="width: 570px;margin-right: -4rem;">
+                        <input type="text" style="height:50px;" formControlName="mobile" class="form-control"
+                            placeholder="ادخل رقم الهاتف" name="search2">
+                        <button style="width: 50px;"><i class="fas fa-mobile-alt" style="font-size: 25px;"></i></button>
+                </form>
+
+                </div>
+                <div>
+                    <button type="submit" class="btn  "
+                        style="height: 50px;color: white;float: left;margin-left: 5.5rem;margin-top: 2rem;
+                        font-size: 20px;width:500px;background-color:rgb(70, 184, 219);">اضافة
+                        مدرس</button>
+                </div>
+
+
+               
+            </form>
+        </div>
+    </div>
+</div>

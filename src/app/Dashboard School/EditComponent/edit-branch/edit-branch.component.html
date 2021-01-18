@@ -1,0 +1,51 @@
+<div class="modal-body">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="editForm">
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="lastName" class="col-form-label col-sm-2 text-right">ID</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="id" class="form-control" />
+                <div *ngIf="editFormData.id.invalid &amp;&amp; (editFormData.id.dirty || editFormData.id.touched)"
+                    class="alert-danger">
+                    <span>Last name is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="firstName" class="col-form-label col-sm-2 text-right">اسم الفرع</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="name" class="form-control" />
+                <div *ngIf="editFormData.name.invalid &amp;&amp; (editFormData.name.dirty || editFormData.name.touched)"
+                    class="alert-danger">
+                    <span>First name is required!</span>
+                </div>
+            </div>
+        </div>
+      
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="email" class="col-form-label col-sm-2 text-right">المدينه</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="city" class="form-control" />
+                <div *ngIf="editFormData.city.invalid &amp;&amp; (editFormData.city.dirty || editFormData.city.touched)"
+                    class="alert-danger">
+                    <span *ngIf="editFormData.city.errors.required">Email is required!</span>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="form-group row d-flex justify-content-center align-items-center">
+            <label for="mobileNumber" class="col-form-label col-sm-2 text-right"> الحى</label>
+            <div class="col-sm-5">
+                <input type="text" formControlName="district" class="form-control" />
+                <div *ngIf="editFormData.district.invalid &amp;&amp; (editFormData.district.dirty || editFormData.district.touched)"
+                    class="alert-danger">
+                    <span>Mobile number is required!</span>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer" >
+            <button [disabled]="isLoading" class="btn  mr-2" (click)="modal.close('Cancel')" style="background-color:  rgb(70, 184, 219);color: white;width:100px" >رجوع</button>
+            <button  [disabled]="isLoading" class="btn  mr-2" style="background-color:  rgb(70, 184, 219);color: white;width:100px"  >حفظ</button>
+        </div>
+ 
+    </form>
+</div>
